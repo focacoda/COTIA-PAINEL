@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotia 2026 — Painel Zonas 227 e 286</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#F6F3EE;color:#1B1E24;font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing:antialiased}
+a{color:inherit}
+.header{position:sticky;top:0;z-index:20;background:rgba(246,243,238,.92);backdrop-filter: blur(8px);border-bottom:1px solid #E6E0D6}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:38px;height:38px;border-radius:10px;background:#111827;color:#F6F3EE;display:grid;place-items:center;font-weight:800;letter-spacing:.02em}
+.brand h1{font-size:15px;line-height:1.1;margin:0;font-weight:800;letter-spacing:-.02em}
+.brand p{margin:2px 0 0;font-size:12px;color:#6B7280}
+.badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.badge{font-size:11px;font-weight:700;letter-spacing:.04em;padding:7px 10px;border-radius:999px;border:1px solid #E6E0D6;background:white}
+.badge.dark{background:#111827;color:white;border-color:#111827}
+.wrap{max-width:1280px;margin:0 auto;padding:18px 20px 40px}
+.notice{background:#FFF7D6;border:1px solid #F1D97A;color:#6B5900;border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5;margin-bottom:16px}
+.notice strong{color:#3B2F00}
+.grid{display:grid;grid-template-columns: 340px 1fr;gap:16px}
+@media(max-width: 980px){.grid{grid-template-columns:1fr}.header-inner{flex-direction:column;align-items:flex-start}}
+.card{background:white;border:1px solid #E6E0D6;border-radius:16px;overflow:hidden}
+.card-h{padding:14px 16px;border-bottom:1px solid #F0EBE3;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.card-h h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#6B7280;margin:0}
+.card-h small{font-size:11px;color:#9CA3AF}
+.card-b{padding:16px}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.kpi{background:white;border:1px solid #E6E0D6;border-radius:16px;padding:14px}
+.kpi label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6B7280;font-weight:700;display:block;margin-bottom:6px}
+.kpi strong{font-size:22px;letter-spacing:-.03em}
+.kpi span{font-size:12px;color:#6B7280;display:block;margin-top:4px;line-height:1.4}
+.filters h3{font-size:13px;margin:0 0 10px;letter-spacing:-.01em}
+.field{margin-bottom:14px}
+.field label{font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px}
+.zone-row{display:flex;gap:8px}
+.zone-btn{flex:1;padding:10px 8px;border-radius:12px;border:1px solid #E6E0D6;background:white;font-weight:800;font-size:13px;cursor:pointer}
+.zone-btn.on{background:#111827;color:white;border-color:#111827}
+.select, .search{width:100%;padding:11px 12px;border-radius:12px;border:1px solid #E6E0D6;background:white;font-size:13px;outline:none}
+.search:focus,.select:focus{border-color:#111827;box-shadow:0 0 0 3px #11182711}
+.hint{font-size:11px;color:#9CA3AF;margin-top:6px;line-height:1.4}
+.btn{appearance:none;border:0;border-radius:12px;padding:11px 14px;font-weight:800;font-size:13px;cursor:pointer}
+.btn-dark{background:#111827;color:white}
+.btn-ghost{background:white;border:1px solid #E6E0D6}
+.btn-small{padding:8px 10px;font-size:12px;border-radius:10px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;background:#F3F0E8;border:1px solid #E6E0D6;font-size:12px;font-weight:600}
+.pill button{border:0;background:transparent;cursor:pointer;font-weight:800}
+.cand-list{max-height:320px;overflow:auto;border:1px solid #E6E0D6;border-radius:12px}
+.cand-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-bottom:1px solid #F0EBE3;cursor:pointer}
+.cand-item:last-child{border-bottom:0}
+.cand-item:hover{background:#F8F7F3}
+.cand-item.active{background:#111827;color:white}
+.cand-item.active .muted{color:#D1D5DB}
+.cand-name{font-weight:750;font-size:13px;line-height:1.2}
+.cand-meta{font-size:11px;display:flex;gap:6px;align-items:center;margin-top:3px}
+.tag{font-size:10px;font-weight:800;letter-spacing:.05em;padding:3px 6px;border-radius:999px;border:1px solid currentColor}
+.tag.fed{color:#0F4C5C;background:#E6F2F3;border-color:#0F4C5C22}
+.tag.est{color:#9A3B1F;background:#FFF0E8;border-color:#E4572E22}
+.cand-item.active .tag.fed,.cand-item.active .tag.est{background:white;color:#111827;border-color:white}
+.muted{color:#6B7280;font-size:11px}
+.vs{display:grid;grid-template-columns:1fr 44px 1fr;gap:10px;align-items:start}
+.vs-mid{display:grid;place-items:center;height:46px;font-weight:900;color:#9CA3AF}
+.compare-stage{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.compare-stage{grid-template-columns:1fr}.vs{grid-template-columns:1fr}.vs-mid{display:none}}
+.cmp-card{border-radius:16px;padding:16px;border:1px solid #E6E0D6;background:linear-gradient(180deg, white, #FCFBF9)}
+.cmp-card.a{border-left:4px solid #0F4C5C}
+.cmp-card.b{border-left:4px solid #E4572E}
+.cmp-card h4{margin:0;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6B7280}
+.cmp-card .name{margin:6px 0 2px;font-size:18px;letter-spacing:-.02em;font-weight:900;line-height:1.1}
+.cmp-card .nums{display:flex;gap:14px;margin-top:10px;flex-wrap:wrap}
+.num label{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6B7280;font-weight:700;display:block}
+.num strong{font-size:20px;letter-spacing:-.02em}
+.num small{font-size:11px;color:#6B7280}
+.bar{height:8px;background:#F3F0E8;border-radius:999px;overflow:hidden;margin-top:10px;display:flex}
+.bar i{display:block;height:100%}
+.bar i.a{background:#0F4C5C}
+.bar i.b{background:#E4572E}
+.table-wrap{overflow:auto;border:1px solid #E6E0D6;border-radius:16px;background:white}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:760px}
+thead th{position:sticky;top:0;background:#111827;color:white;text-align:left;padding:10px 12px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+thead th.right, tbody td.right{text-align:right}
+tbody td{padding:10px 12px;border-bottom:1px solid #F0EBE3;vertical-align:middle}
+tbody tr:hover{background:#F8F7F3}
+.win-a{font-weight:800;color:#0F4C5C}
+.win-b{font-weight:800;color:#9A3B1F}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{padding:8px 11px;border-radius:999px;border:1px solid #E6E0D6;background:white;font-size:12px;font-weight:700;cursor:pointer}
+.chip.on{background:#111827;color:white;border-color:#111827}
+.mini{font-size:12px;color:#6B7280}
+.footer{margin-top:18px;font-size:12px;color:#9CA3AF;line-height:1.5}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="mark">CT</div>
+      <div>
+        <h1>Cotia 2026 — Zonas 227 e 286</h1>
+        <p>Deputado Federal e Estadual · 558 seções · 81 escolas · dados completos</p>
+      </div>
+    </div>
+    <div class="badges">
+      <span class="badge dark" id="badgeTotal">149.926 votos por cargo</span>
+      <span class="badge" id="badgeFilt">Filtro: Cotia inteira</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="notice" id="noticeBairro">✓ Base completa carregada com <strong>93.657 linhas, 558 seções e 81 locais</strong>. Total por cargo: <strong>149.926 votos</strong>. Média de <strong>~269 votos por seção</strong> — números fechados com o TSE. <br>⚠ <strong>Bairro ainda não está no arquivo do TSE:</strong> a base traz escola e endereço, mas sem coluna de bairro. O filtro de bairro ficará desativado até você enviar a planilha de bairros por escola ou a lista de equipes por escola/bairro — aí eu habilito na hora. Enquanto isso, filtre por zona e escola normalmente.</div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid">
+    <!-- LEFT: filtros -->
+    <div>
+      <div class="card">
+        <div class="card-h"><h2>Filtros de território</h2><small id="secCount">558 seções</small></div>
+        <div class="card-b">
+          <div class="field">
+            <label>Zona</label>
+            <div class="zone-row">
+              <button class="zone-btn on" data-zona="227" onclick="toggleZona(227)">227</button>
+              <button class="zone-btn on" data-zona="286" onclick="toggleZona(286)">286</button>
+              <button class="zone-btn" onclick="clearZona()" title="Todas" style="flex:.7;background:#F3F0E8">Todas</button>
+            </div>
+            <div class="hint">Zonas de Cotia. A 286 também atende Vargem Grande, mas aqui já está filtrado só para COTIA.</div>
+          </div>
+
+          <div class="field">
+            <label>Escola / Local de votação</label>
+            <select class="select" id="escolaSel" onchange="onEscolaChange()">
+              <option value="">Todas as 81 escolas</option>
+            </select>
+            <div class="hint" id="escolaHint">Selecione uma escola para ver só as seções dela.</div>
+          </div>
+
+          <div class="field">
+            <label>Buscar escola por nome ou endereço</label>
+            <input class="search" id="buscaEscola" placeholder="Ex: Rio Branco, Batista, Atalaia..." oninput="filterEscolaOptions()">
+          </div>
+
+          <div class="field">
+            <label>Bairro</label>
+            <select class="select" disabled><option>Sem coluna de bairro nesta base — envie a planilha de bairros</option></select>
+            <div class="hint">Assim que tiver o bairro por escola, habilito aqui e no ranking por bairro.</div>
+          </div>
+
+          <div class="field">
+            <label>Equipe responsável (opcional)</label>
+            <input class="search" id="equipeInput" placeholder="Ex: Equipe Atalaia, Equipe Caucaia..." oninput="onEquipeInput()">
+            <div class="hint">Digite o nome da equipe para filtrar depois no comparativo. Depois você pode me mandar a planilha equipe × escola e eu vinculo automático.</div>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn btn-ghost btn-small" onclick="limparFiltros()">Limpar filtros</button>
+            <button class="btn btn-dark btn-small" onclick="exportCSV()">Exportar tabela (CSV)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="card-h"><h2>Comparativo livre</h2><small>estadual × estadual, federal × federal ou cruzado</small></div>
+        <div class="card-b">
+          <div class="vs">
+            <div>
+              <label class="mini" style="font-weight:700;display:block;margin-bottom:6px">Candidato A</label>
+              <input class="search" id="searchA" placeholder="Buscar candidato A..." oninput="searchCand('A')">
+              <div class="cand-list" id="listA" style="margin-top:8px"></div>
+              <div id="pickA" class="pill" style="margin-top:10px;display:none"></div>
+            </div>
+            <div class="vs-mid">×</div>
+            <div>
+              <label class="mini" style="font-weight:700;display:block;margin-bottom:6px">Candidato B</label>
+              <input class="search" id="searchB" placeholder="Buscar candidato B..." oninput="searchCand('B')">
+              <div class="cand-list" id="listB" style="margin-top:8px"></div>
+              <div id="pickB" class="pill" style="margin-top:10px;display:none"></div>
+            </div>
+          </div>
+          <div class="hint" style="margin-top:10px">Dica: digite parte do nome. A tag mostra o cargo. Clique no nome para selecionar.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: main -->
+    <div>
+      <div class="compare-stage" id="compareStage">
+        <div class="cmp-card a" id="cmpA"><h4>Candidato A</h4><div class="name" id="cmpAName">Selecione um candidato</div><div class="nums"><div class="num"><label>votos no filtro</label><strong id="cmpAVotos">—</strong><small id="cmpAPct">—</small></div><div class="num"><label>colocação em Cotia</label><strong id="cmpARank">—</strong><small id="cmpATotal">de 1.812 candidatos</small></div></div><div class="bar"><i class="a" id="barA" style="width:0"></i><i class="b" id="barB" style="width:0"></i></div></div>
+        <div class="cmp-card b" id="cmpB"><h4>Candidato B</h4><div class="name" id="cmpBName">Selecione um candidato</div><div class="nums"><div class="num"><label>votos no filtro</label><strong id="cmpBVotos">—</strong><small id="cmpBPct">—</small></div><div class="num"><label>diferença</label><strong id="cmpDiff">—</strong><small id="cmpDiffPct">—</small></div></div><div class="bar"><i class="a" id="barA2" style="width:0"></i><i class="b" id="barB2" style="width:0"></i></div></div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="card-h">
+          <h2 id="tableTitle">Ranking por escola — selecione A e B para comparar</h2>
+          <div class="controls">
+            <button class="chip on" data-group="escola" onclick="setGroup('escola')">Por escola</button>
+            <button class="chip" data-group="secao" onclick="setGroup('secao')">Por seção</button>
+            <span class="mini" id="groupHint">81 locais</span>
+          </div>
+        </div>
+        <div class="card-b" style="padding:0">
+          <div class="table-wrap">
+            <table>
+              <thead><tr id="theadRow"><th>Escola / Local</th><th class="right">A</th><th class="right">B</th><th class="right">Diferença</th><th class="right">% no local</th><th>Vencedor</th></tr></thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+          <div style="padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <span class="mini" id="tbodyInfo">Selecione dois candidatos para ver o ranking.</span>
+            <div class="controls">
+              <button class="chip on" data-sort="diff" onclick="setSort('diff')">Maior diferença</button>
+              <button class="chip" data-sort="a" onclick="setSort('a')">Mais votos A</button>
+              <button class="chip" data-sort="b" onclick="setSort('b')">Mais votos B</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">Base: votação por seção 2026 — TSE, filtrada para Cotia (zonas 227 e 286). Totais conferidos: 149.926 votos por cargo, mediana de 276 votos por seção. Endereço e escola vêm do arquivo; bairro precisa de base complementar de locais de votação. Painel responsivo — funciona no celular e no PC, com link aberto.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+let DATA=null;
+let zonasAtivas=new Set([227,286]);
+let escolaAtiva="";
+let equipeFiltro="";
+let candidatoA=null, candidatoB=null;
+let grupo='escola', sort='diff';
+
+// will be filled after DATA loads
+let secaoIndexByKey=new Map();
+let secoesFiltradasIdx=new Set();
+let escolasFiltradas=[];
+
+function fmt(n){ return n.toLocaleString('pt-BR'); }
+function pct(a,total){ if(!total) return '—'; return ((a/total)*100).toFixed(1).replace('.',',')+'%'; }
+
+async function loadData(){
+  const res = await fetch('cotia_dados.json');
+  DATA = await res.json();
+  // build indexes
+  DATA.secoes.forEach((s,i)=> secaoIndexByKey.set(s.zona+'-'+s.secao, i));
+  buildEscolaSelect();
+  buildCandLists();
+  applyFilters();
+}
+
+function buildEscolaSelect(){
+  const sel=document.getElementById('escolaSel');
+  // unique escolas já vem em DATA.escolas (81)
+  DATA.escolas.sort((a,b)=> a.escola.localeCompare(b.escola));
+  DATA.escolas.forEach(e=>{
+    const opt=document.createElement('option');
+    opt.value = e.escola;
+    opt.textContent = e.escola + ' — Z' + e.zona + ' ('+ e.secoes.length +' seções)';
+    sel.appendChild(opt);
+  });
+}
+
+function filteredSecoes(){
+  const out=[];
+  DATA.secoes.forEach((s,i)=>{
+    if(!zonasAtivas.has(s.zona)) return;
+    if(escolaAtiva && s.escola!==escolaAtiva) return;
+    // equipe filter: for now free text matches escola name contains
+    if(equipeFiltro && !s.escola.toLowerCase().includes(equipeFiltro.toLowerCase()) && !s.endereco.toLowerCase().includes(equipeFiltro.toLowerCase())) return;
+    out.push(i);
+  });
+  return out;
+}
+
+function applyFilters(){
+  const idxs = filteredSecoes();
+  secoesFiltradasIdx = new Set(idxs);
+  document.getElementById('secCount').textContent = idxs.length + ' seções no filtro';
+  document.getElementById('badgeFilt').textContent = 'Filtro: ' + (escolaAtiva? escolaAtiva : (zonasAtivas.size===2?'Cotia inteira':'Zona '+[...zonasAtivas].join(' + '))) + ' · ' + idxs.length + ' seções';
+  updateKPIs();
+  updateCompare();
+}
+
+function updateKPIs(){
+  const el=document.getElementById('kpis');
+  const totalSec = DATA.secoes.length;
+  const filtradas = secoesFiltradasIdx.size;
+  const totalEscolas = DATA.escolas.length;
+  const escolasNoFiltro = new Set([...secoesFiltradasIdx].map(i=> DATA.secoes[i].escola)).size;
+  const totalVotosFiltro = sumVotosNoFiltro(); // por cargo é igual total
+  // votos válidos aprox = totalVotosFiltro (já inclui brancos/nulos na base, mas total por cargo = 149k)
+  el.innerHTML = `
+    <div class="kpi"><label>Seções no filtro</label><strong>${fmt(filtradas)}</strong><span>de ${fmt(totalSec)} em Cotia</span></div>
+    <div class="kpi"><label>Escolas no filtro</label><strong>${fmt(escolasNoFiltro)}</strong><span>de ${fmt(totalEscolas)} locais</span></div>
+    <div class="kpi"><label>Votos por cargo no filtro</label><strong>${fmt(totalVotosFiltro)}</strong><span>média ~${filtradas? Math.round(totalVotosFiltro/filtradas):0} por seção</span></div>
+    <div class="kpi"><label>Candidatos na base</label><strong>${fmt(DATA.candidatos.length)}</strong><span>812 federal · 1.000 estadual</span></div>
+  `;
+}
+
+function sumVotosNoFiltro(){
+  let s=0;
+  // soma votos de qualquer cargo mas só um cargo para não dobrar; usa Deputado Federal
+  const candFedIdx = new Set(DATA.candidatos.map((c,i)=> c.cargo==='Deputado Federal'?i:null).filter(x=>x!==null));
+  for(const [si,ci,v] of DATA.votos){
+    if(!secoesFiltradasIdx.has(si)) continue;
+    if(!candFedIdx.has(ci)) continue;
+    s+=v;
+  }
+  return s;
+}
+
+function toggleZona(z){
+  if(zonasAtivas.has(z)) zonasAtivas.delete(z); else zonasAtivas.add(z);
+  if(zonasAtivas.size===0) zonasAtivas=new Set([227,286]);
+  document.querySelectorAll('.zone-btn[data-zona]').forEach(b=>{
+    const v=parseInt(b.dataset.zona);
+    b.classList.toggle('on', zonasAtivas.has(v));
+  });
+  applyFilters();
+}
+function clearZona(){
+  zonasAtivas=new Set([227,286]);
+  document.querySelectorAll('.zone-btn[data-zona]').forEach(b=> b.classList.add('on'));
+  applyFilters();
+}
+function onEscolaChange(){
+  escolaAtiva=document.getElementById('escolaSel').value;
+  applyFilters();
+}
+function filterEscolaOptions(){
+  const q=document.getElementById('buscaEscola').value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  const sel=document.getElementById('escolaSel');
+  [...sel.options].forEach((opt,i)=>{
+    if(i===0) return;
+    const txt=opt.textContent.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+    opt.hidden = q && !txt.includes(q);
+  });
+}
+function limparFiltros(){
+  zonasAtivas=new Set([227,286]);
+  escolaAtiva=""; equipeFiltro="";
+  document.getElementById('escolaSel').value="";
+  document.getElementById('buscaEscola').value="";
+  document.getElementById('equipeInput').value="";
+  document.querySelectorAll('.zone-btn[data-zona]').forEach(b=> b.classList.add('on'));
+  filterEscolaOptions();
+  applyFilters();
+}
+function onEquipeInput(){
+  equipeFiltro=document.getElementById('equipeInput').value.trim();
+  applyFilters();
+}
+
+// candidatos
+function buildCandLists(){
+  renderCandList('A','');
+  renderCandList('B','');
+}
+function renderCandList(which, q){
+  const el=document.getElementById('list'+which);
+  const norm=s=> s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  const qn=norm(q);
+  let cands = DATA.candidatos.map((c,i)=> ({...c, idx:i, total: 0}));
+  // compute total quickly
+  const totals=new Array(DATA.candidatos.length).fill(0);
+  for(const [si,ci,v] of DATA.votos) totals[ci]+=v;
+  cands.forEach(c=> c.total=totals[c.idx]);
+  cands.sort((a,b)=> b.total - a.total);
+  if(qn) cands = cands.filter(c=> norm(c.nome).includes(qn) || String(c.nrvotavel).includes(qn));
+  cands = cands.slice(0,120);
+  el.innerHTML = cands.map(c=> `
+    <div class="cand-item ${ (which==='A'&&candidatoA===c.idx)||(which==='B'&&candidatoB===c.idx)?'active':''}" onclick="pickCand('${which}',${c.idx})">
+      <div>
+        <div class="cand-name">${c.nome}</div>
+        <div class="cand-meta"><span class="tag ${c.cargo.includes('Federal')?'fed':'est'}">${c.cargo.includes('Federal')?'FEDERAL':'ESTADUAL'}</span><span class="muted">#${c.nrvotavel} · ${fmt(c.total)} votos em Cotia</span></div>
+      </div>
+      <span class="muted">${c.total>0? pct(c.total,149926):''}</span>
+    </div>
+  `).join('') || '<div style="padding:12px" class="muted">Nenhum candidato encontrado.</div>';
+}
+function searchCand(which){
+  const q=document.getElementById('search'+which).value;
+  renderCandList(which,q);
+}
+function pickCand(which, idx){
+  if(which==='A') candidatoA=idx; else candidatoB=idx;
+  const c=DATA.candidatos[idx];
+  const pill=document.getElementById('pick'+which);
+  pill.style.display='inline-flex';
+  pill.innerHTML = `${c.nome} <span class="tag ${c.cargo.includes('Federal')?'fed':'est'}" style="margin-left:6px">${c.cargo.includes('Federal')?'FED':'EST'}</span> <button onclick="clearPick('${which}')">×</button>`;
+  renderCandList('A', document.getElementById('searchA').value);
+  renderCandList('B', document.getElementById('searchB').value);
+  updateCompare();
+}
+function clearPick(which){
+  if(which==='A') candidatoA=null; else candidatoB=null;
+  document.getElementById('pick'+which).style.display='none';
+  renderCandList(which, document.getElementById('search'+which).value);
+  updateCompare();
+}
+
+function votosCandNoFiltro(candIdx){
+  let s=0;
+  for(const [si,ci,v] of DATA.votos){
+    if(ci!==candIdx) continue;
+    if(!secoesFiltradasIdx.has(si)) continue;
+    s+=v;
+  }
+  return s;
+}
+function totalVotosNoFiltroPorCargo(){ return sumVotosNoFiltro(); }
+
+function updateCompare(){
+  const totalNoFiltro = totalVotosNoFiltroPorCargo();
+  const aNameEl=document.getElementById('cmpAName'), bNameEl=document.getElementById('cmpBName');
+  const aV=document.getElementById('cmpAVotos'), bV=document.getElementById('cmpBVotos');
+  const aPct=document.getElementById('cmpAPct'), bPct=document.getElementById('cmpBPct');
+  const aRankEl=document.getElementById('cmpARank'), bDiffEl=document.getElementById('cmpDiff');
+  const bDiffPct=document.getElementById('cmpDiffPct');
+
+  if(candidatoA!==null){
+    const c=DATA.candidatos[candidatoA];
+    const v=votosCandNoFiltro(candidatoA);
+    aNameEl.textContent=c.nome; aNameEl.title=c.cargo+' #'+c.nrvotavel;
+    aV.textContent=fmt(v);
+    aPct.textContent= pct(v,totalNoFiltro) + ' dos votos no filtro';
+    // rank entre mesmo cargo
+    const totals=new Array(DATA.candidatos.length).fill(0);
+    for(const [si,ci,vt] of DATA.votos) totals[ci]+=vt;
+    const mesmoCargo = DATA.candidatos.map((cc,i)=> ({i,cargo:cc.cargo,tot:totals[i]})).filter(x=> x.cargo===c.cargo).sort((x,y)=> y.tot - x.tot);
+    const pos = mesmoCargo.findIndex(x=> x.i===candidatoA)+1;
+    aRankEl.textContent = pos? pos+'º':'—';
+    document.getElementById('cmpATotal').textContent = 'entre '+mesmoCargo.length+' do mesmo cargo';
+  } else {
+    aNameEl.textContent='Selecione um candidato';
+    aV.textContent='—'; aPct.textContent='—'; aRankEl.textContent='—';
+  }
+  if(candidatoB!==null){
+    const c=DATA.candidatos[candidatoB];
+    const v=votosCandNoFiltro(candidatoB);
+    bNameEl.textContent=c.nome;
+    bV.textContent=fmt(v);
+    bPct.textContent= pct(v,totalNoFiltro) + ' dos votos no filtro';
+    if(candidatoA!==null){
+      const va=votosCandNoFiltro(candidatoA), vb=v;
+      const diff=vb-va;
+      bDiffEl.textContent=(diff>0?'+':'')+fmt(diff);
+      bDiffEl.className = diff>0? 'win-b' : diff<0? 'win-a' : '';
+      bDiffPct.textContent= (diff>0? 'B à frente por ':'A à frente por ') + Math.abs(diff).toLocaleString('pt-BR') + ' ('+ (totalNoFiltro? ((Math.abs(diff)/totalNoFiltro)*100).toFixed(1).replace('.',','):'0')+'% do filtro)';
+      const tot=Math.max(va,vb,1); const pa=(va/tot)*100, pb=(vb/tot)*100;
+      // normalize to sum 100 for bar
+      const sum=va+vb||1;
+      document.getElementById('barA').style.width=(va/sum*100)+'%';
+      document.getElementById('barB').style.width=(vb/sum*100)+'%';
+      document.getElementById('barA2').style.width=(va/sum*100)+'%';
+      document.getElementById('barB2').style.width=(vb/sum*100)+'%';
+    } else {
+      bDiffEl.textContent='—'; bDiffPct.textContent='Selecione o candidato A para comparar';
+    }
+  } else {
+    bNameEl.textContent='Selecione um candidato';
+    bV.textContent='—'; bPct.textContent='—'; bDiffEl.textContent='—'; bDiffPct.textContent='—';
+    document.getElementById('barA').style.width='0';document.getElementById('barB').style.width='0';
+    document.getElementById('barA2').style.width='0';document.getElementById('barB2').style.width='0';
+  }
+  renderTable();
+}
+
+function setGroup(g){
+  grupo=g;
+  document.querySelectorAll('.chip[data-group]').forEach(c=> c.classList.toggle('on', c.dataset.group===g));
+  document.getElementById('groupHint').textContent = g==='escola'?'81 locais':'558 seções';
+  document.getElementById('tableTitle').textContent = g==='escola'? 'Ranking por escola — A × B' : 'Ranking por seção — A × B';
+  document.getElementById('theadRow').innerHTML = g==='escola'
+    ? '<th>Escola / Local</th><th>Zona</th><th class="right">A</th><th class="right">B</th><th class="right">Diferença</th><th class="right">% no local</th><th>Vencedor</th>'
+    : '<th>Seção</th><th>Escola</th><th class="right">A</th><th class="right">B</th><th class="right">Diferença</th><th class="right">% na seção</th><th>Vencedor</th>';
+  renderTable();
+}
+function setSort(s){
+  sort=s;
+  document.querySelectorAll('.chip[data-sort]').forEach(c=> c.classList.toggle('on', c.dataset.sort===s));
+  renderTable();
+}
+
+function renderTable(){
+  const tbody=document.getElementById('tbody');
+  const info=document.getElementById('tbodyInfo');
+  if(candidatoA===null || candidatoB===null){
+    tbody.innerHTML='<tr><td colspan="7" style="text-align:center;padding:28px;color:#9CA3AF">Selecione dois candidatos no bloco "Comparativo livre" acima para ver o ranking. Você pode comparar estadual × estadual, federal × federal ou estadual × federal livremente.</td></tr>';
+    info.textContent='Selecione dois candidatos para ver o ranking.';
+    return;
+  }
+  // build map secaoIdx -> {a,b,totalSecao}
+  const mapSec=new Map();
+  for(const [si,ci,v] of DATA.votos){
+    if(!secoesFiltradasIdx.has(si)) continue;
+    if(ci!==candidatoA && ci!==candidatoB) continue;
+    if(!mapSec.has(si)) mapSec.set(si,{a:0,b:0,total:0});
+    const o=mapSec.get(si);
+    if(ci===candidatoA) o.a+=v; else o.b+=v;
+  }
+  // total por secao para % (usar soma de todos os votos na secao no cargo? usa totalVotesSecao federals? Para % no local vamos usar total de votos do filtro naquela secao? Melhor usar total votos na secao (qualquer candidato do mesmo cargo? simplifica: total da secao = soma de todos votos na secao)
+  const totalPorSec=new Map();
+  for(const [si,ci,v] of DATA.votos){
+    if(!secoesFiltradasIdx.has(si)) continue;
+    totalPorSec.set(si, (totalPorSec.get(si)||0)+v);
+  }
+  // Note: totalPorSec includes both cargos dobrado; então dividir por 2 para ter votos por cargo. Mas para % usamos (a+b)/totalSecaoCargo? Vamos usar (a / (totalSec/2))
+  let rows=[];
+  if(grupo==='secao'){
+    for(const [si, o] of mapSec.entries()){
+      const s=DATA.secoes[si];
+      const totalSec = (totalPorSec.get(si)||0)/2;
+      const pctA = totalSec? (o.a/totalSec*100):0;
+      rows.push({key: si, zona:s.zona, secao:s.secao, escola:s.escola, endereco:s.endereco, a:o.a, b:o.b, diff:o.b - o.a, pct:pctA, totalSec});
+    }
+    // incluir secoes sem voto dos dois? não precisa
+    // garantir que todas secoes do filtro apareçam mesmo com zero?
+    for(const si of secoesFiltradasIdx){
+      if(mapSec.has(si)) continue;
+      const s=DATA.secoes[si];
+      const totalSec=(totalPorSec.get(si)||0)/2;
+      rows.push({key: si, zona:s.zona, secao:s.secao, escola:s.escola, endereco:s.endereco, a:0,b:0,diff:0,pct:0,totalSec});
+    }
+  } else {
+    // por escola: agregar
+    const byEscola=new Map();
+    for(const [si, o] of mapSec.entries()){
+      const s=DATA.secoes[si];
+      const key=s.escola;
+      if(!byEscola.has(key)) byEscola.set(key,{escola:key, zona:s.zona, endereco:s.endereco, a:0,b:0, secoes: new Set(), totalSec:0});
+      const ex=byEscola.get(key);
+      ex.a+=o.a; ex.b+=o.b; ex.secoes.add(s.secao);
+    }
+    // completar escolas sem voto e total
+    for(const si of secoesFiltradasIdx){
+      const s=DATA.secoes[si];
+      if(!byEscola.has(s.escola)) byEscola.set(s.escola,{escola:s.escola, zona:s.zona, endereco:s.endereco, a:0,b:0, secoes:new Set(), totalSec:0});
+      byEscola.get(s.escola).secoes.add(s.secao);
+    }
+    // calcular totalSec por escola
+    for(const si of secoesFiltradasIdx){
+      const s=DATA.secoes[si];
+      const ex=byEscola.get(s.escola);
+      // somar totalSec depois
+    }
+    // total por escola
+    for(const [escola, ex] of byEscola.entries()){
+      let tot=0;
+      for(const si of secoesFiltradasIdx){
+        const s=DATA.secoes[si];
+        if(s.escola!==escola) continue;
+        tot+= (totalPorSec.get(si)||0)/2;
+      }
+      ex.totalSec=tot;
+      ex.diff=ex.b - ex.a;
+      ex.pct= tot? (ex.a/tot*100):0;
+      ex.qtdSecoes=ex.secoes.size;
+    }
+    rows=[...byEscola.values()];
+  }
+
+  // sort
+  if(sort==='a') rows.sort((x,y)=> y.a - x.a);
+  else if(sort==='b') rows.sort((x,y)=> y.b - x.b);
+  else rows.sort((x,y)=> Math.abs(y.diff) - Math.abs(x.diff));
+
+  rows=rows.slice(0,300); // limite
+
+  if(grupo==='escola'){
+    tbody.innerHTML=rows.map(r=> `
+      <tr>
+        <td><div style="font-weight:750">${r.escola}</div><div class="mini">${r.endereco} · ${r.qtdSecoes} seções</div></td>
+        <td>${r.zona}</td>
+        <td class="right" style="font-weight:700">${fmt(r.a)}</td>
+        <td class="right" style="font-weight:700">${fmt(r.b)}</td>
+        <td class="right" style="font-weight:800;color:${r.diff>0?'#9A3B1F': r.diff<0?'#0F4C5C':'#6B7280'}">${r.diff>0?'+':''}${fmt(r.diff)}</td>
+        <td class="right">${r.pct.toFixed(1).replace('.',',')}%</td>
+        <td><span class="${r.a>r.b?'win-a': r.b>r.a?'win-b':''}">${r.a>r.b?'A vence': r.b>r.a?'B vence':'Empate'}</span></td>
+      </tr>
+    `).join('');
+  } else {
+    tbody.innerHTML=rows.map(r=> `
+      <tr>
+        <td><strong>Z${r.zona} · Seção ${String(r.secao).padStart(4,'0')}</strong><div class="mini">votos válidos ~${fmt(Math.round(r.totalSec))}</div></td>
+        <td><div style="font-weight:600">${r.escola}</div><div class="mini">${r.endereco}</div></td>
+        <td class="right" style="font-weight:700">${fmt(r.a)}</td>
+        <td class="right" style="font-weight:700">${fmt(r.b)}</td>
+        <td class="right" style="font-weight:800;color:${r.diff>0?'#9A3B1F': r.diff<0?'#0F4C5C':'#6B7280'}">${r.diff>0?'+':''}${fmt(r.diff)}</td>
+        <td class="right">${r.totalSec? (r.a/r.totalSec*100).toFixed(1).replace('.',','): '0,0'}%</td>
+        <td><span class="${r.a>r.b?'win-a': r.b>r.a?'win-b':''}">${r.a>r.b?'A vence': r.b>r.a?'B vence':'Empate'}</span></td>
+      </tr>
+    `).join('');
+  }
+  info.textContent = `${rows.length} ${grupo==='escola'?'escolas':'seções'} · filtro com ${secoesFiltradasIdx.size} seções · comparando ${DATA.candidatos[candidatoA].nome} (A) × ${DATA.candidatos[candidatoB].nome} (B)`;
+}
+
+function exportCSV(){
+  if(candidatoA===null || candidatoB===null){ alert('Selecione dois candidatos no comparativo para exportar.'); return; }
+  const lines=[];
+  if(grupo==='escola'){
+    lines.push(['escola','zona','endereco','secoes_no_local','votos_A','votos_B','diferenca_B_menos_A','pct_A_no_local','vencedor'].join(';'));
+    const rows=[...document.querySelectorAll('#tbody tr')].map(tr=> [...tr.children].map(td=> td.innerText.replace(/\n/g,' ').replace(/;/g,',')));
+    // fallback: rebuild from data to ensure accuracy
+  }
+  // rebuild from last render data: reuse renderTable logic to build csv directly
+  const mapSec=new Map();
+  for(const [si,ci,v] of DATA.votos){
+    if(!secoesFiltradasIdx.has(si)) continue;
+    if(ci!==candidatoA && ci!==candidatoB) continue;
+    if(!mapSec.has(si)) mapSec.set(si,{a:0,b:0});
+    const o=mapSec.get(si);
+    if(ci===candidatoA) o.a+=v; else o.b+=v;
+  }
+  const totalPorSec=new Map();
+  for(const [si,ci,v] of DATA.votos){
+    if(!secoesFiltradasIdx.has(si)) continue;
+    totalPorSec.set(si,(totalPorSec.get(si)||0)+v);
+  }
+  let csv='';
+  if(grupo==='secao'){
+    csv=['zona;secao;escola;endereco;votos_A;votos_B;diferenca;vencedor;pct_A_na_secao'].join('\n')+'\n';
+    for(const si of [...secoesFiltradasIdx].sort((a,b)=> a-b)){
+      const s=DATA.secoes[si];
+      const o=mapSec.get(si)||{a:0,b:0};
+      const total=(totalPorSec.get(si)||0)/2;
+      const pct= total? (o.a/total*100).toFixed(1).replace('.',','):'0,0';
+      const vinc=o.a>o.b?'A':o.b>o.a?'B':'Empate';
+      csv+=`${s.zona};${s.secao};"${s.escola}";"${s.endereco}";${o.a};${o.b};${o.b-o.a};${vinc};${pct}%\n`;
+    }
+  } else {
+    csv=['escola;zona;endereco;qtd_secoes;votos_A;votos_B;diferenca;vencedor;pct_A_no_local'].join(';')+'\n';
+    const byEscola=new Map();
+    for(const si of secoesFiltradasIdx){
+      const s=DATA.secoes[si];
+      if(!byEscola.has(s.escola)) byEscola.set(s.escola,{zona:s.zona, endereco:s.endereco, a:0,b:0, secoes:new Set()});
+      const ex=byEscola.get(s.escola);
+      const o=mapSec.get(si);
+      if(o){ ex.a+=o.a; ex.b+=o.b; }
+      ex.secoes.add(s.secao);
+    }
+    for(const [escola, ex] of byEscola.entries()){
+      let tot=0;
+      for(const si of secoesFiltradasIdx){
+        const s=DATA.secoes[si];
+        if(s.escola!==escola) continue;
+        tot+=(totalPorSec.get(si)||0)/2;
+      }
+      const pct= tot? (ex.a/tot*100).toFixed(1).replace('.',','):'0,0';
+      const vinc=ex.a>ex.b?'A':ex.b>ex.a?'B':'Empate';
+      csv+=`"${escola}";${ex.zona};"${ex.endereco}";${ex.secoes.size};${ex.a};${ex.b};${ex.b-ex.a};${vinc};${pct}%\n`;
+    }
+  }
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=`cotia_2026_${grupo}_A_vs_B.csv`; a.click(); URL.revokeObjectURL(url);
+}
+
+loadData();
+</script>
+</body>
+</html>

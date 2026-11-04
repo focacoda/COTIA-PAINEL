@@ -1,0 +1,2069 @@
+{
+ "teams": [
+  {
+   "nome": "TIME DN MOISES",
+   "n": 23,
+   "atila": 125,
+   "alex": 123,
+   "excl": 12
+  },
+  {
+   "nome": "TIME FB DANILO PÃO",
+   "n": 20,
+   "atila": 92,
+   "alex": 92,
+   "excl": 16
+  },
+  {
+   "nome": "TIME FB MARIVALDO",
+   "n": 18,
+   "atila": 138,
+   "alex": 136,
+   "excl": 9
+  },
+  {
+   "nome": "TIME GU ADALTO_FELIPE",
+   "n": 16,
+   "atila": 139,
+   "alex": 129,
+   "excl": 4
+  },
+  {
+   "nome": "TIME GU AUGUSTO",
+   "n": 20,
+   "atila": 118,
+   "alex": 113,
+   "excl": 9
+  },
+  {
+   "nome": "TIME GU BIRO",
+   "n": 16,
+   "atila": 88,
+   "alex": 89,
+   "excl": 5
+  },
+  {
+   "nome": "TIME GU KIKO",
+   "n": 16,
+   "atila": 103,
+   "alex": 93,
+   "excl": 5
+  },
+  {
+   "nome": "TIME GU NALDO",
+   "n": 20,
+   "atila": 107,
+   "alex": 97,
+   "excl": 11
+  },
+  {
+   "nome": "TIME GU RODRIGO",
+   "n": 18,
+   "atila": 66,
+   "alex": 61,
+   "excl": 12
+  },
+  {
+   "nome": "TIME MQ BARRIGA",
+   "n": 17,
+   "atila": 112,
+   "alex": 107,
+   "excl": 7
+  },
+  {
+   "nome": "TIME MQ FELIPE",
+   "n": 16,
+   "atila": 145,
+   "alex": 143,
+   "excl": 1
+  },
+  {
+   "nome": "TIME RON LANGO",
+   "n": 19,
+   "atila": 76,
+   "alex": 73,
+   "excl": 16
+  },
+  {
+   "nome": "TIME RON MARCIO",
+   "n": 15,
+   "atila": 68,
+   "alex": 62,
+   "excl": 10
+  }
+ ],
+ "secoes": [
+  {
+   "z": "227",
+   "s": "1",
+   "escola": "E.E. BATISTA CEPELOS",
+   "bairro": "CENTRO",
+   "atila": 1,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "113",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "16",
+   "escola": "E.E. ZACARIAS ANTONIO DA SILVA",
+   "bairro": "VILA SÃO FRANCISCO",
+   "atila": 1,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "19",
+   "escola": "E.E. IDOMINEU ANTUNES CALDEIRA",
+   "bairro": "VILA SANTO ANTÔNIO DO PORTÃO",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME GU BIRO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "22",
+   "escola": "E.E. PEDRO CASEMIRO LEITE",
+   "bairro": "PORTÃO",
+   "atila": 1,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "23",
+   "escola": "E.E. PEDRO CASEMIRO LEITE",
+   "bairro": "PORTÃO",
+   "atila": 3,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "24",
+   "escola": "E.E. PEDRO CASEMIRO LEITE",
+   "bairro": "PORTÃO",
+   "atila": 1,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "242",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 6,
+   "alex": 5,
+   "n": 2,
+   "equipes": [
+    "TIME GU BIRO",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "252",
+   "escola": "E.E. IDOMINEU ANTUNES CALDEIRA",
+   "bairro": "VILA SANTO ANTÔNIO DO PORTÃO",
+   "atila": 8,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "253",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME GU KIKO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "259",
+   "escola": "E.M. JOAQUIM PEREIRA DA SILVA",
+   "bairro": "VILA SÃO JOAQUIM",
+   "atila": 4,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "26",
+   "escola": "E.E. PEDRO CASEMIRO LEITE",
+   "bairro": "PORTÃO",
+   "atila": 1,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "260",
+   "escola": "E.M. JOAQUIM PEREIRA DA SILVA",
+   "bairro": "VILA SÃO JOAQUIM",
+   "atila": 1,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "265",
+   "escola": "E.E. JARDIM SANTA ANGELA",
+   "bairro": "JARDIM SANTA IZABEL",
+   "atila": 0,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "269",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 5,
+   "alex": 8,
+   "n": 5,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME FB MARIVALDO",
+    "TIME GU AUGUSTO",
+    "TIME GU BIRO",
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "28",
+   "escola": "E.E. PEDRO CASEMIRO LEITE",
+   "bairro": "PORTÃO",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU KIKO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "290",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 9,
+   "alex": 9,
+   "n": 2,
+   "equipes": [
+    "TIME GU AUGUSTO",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "293",
+   "escola": "E.E. PEDRO CASEMIRO LEITE",
+   "bairro": "PORTÃO",
+   "atila": 3,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU KIKO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "294",
+   "escola": "E.E. VILA SÃO JOAQUIM II",
+   "bairro": "JARDIM LEONOR",
+   "atila": 8,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "30",
+   "escola": "E.E. PEDRO CASEMIRO LEITE",
+   "bairro": "PORTÃO",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "302",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 14,
+   "alex": 13,
+   "n": 4,
+   "equipes": [
+    "TIME FB MARIVALDO",
+    "TIME GU ADALTO_FELIPE",
+    "TIME GU AUGUSTO",
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "316",
+   "escola": "E.E. FERNÃO DIAS PAES LEME",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 3,
+   "alex": 3,
+   "n": 2,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE",
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "32",
+   "escola": "E.E. DEPUTADA CONCEIÇÃO DA COSTA NEVES",
+   "bairro": "JARDIM RIO DAS PEDRAS",
+   "atila": 2,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "322",
+   "escola": "E.M. FRANCISCA MANOEL DE OLIVEIRA",
+   "bairro": "PORTÃO",
+   "atila": 4,
+   "alex": 4,
+   "n": 2,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "324",
+   "escola": "E.E. BATISTA CEPELOS",
+   "bairro": "CENTRO",
+   "atila": 1,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "34",
+   "escola": "E.E. DEPUTADA CONCEIÇÃO DA COSTA NEVES",
+   "bairro": "JARDIM RIO DAS PEDRAS",
+   "atila": 3,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "347",
+   "escola": "E.M. JARDIM PANORAMA",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 4,
+   "alex": 4,
+   "n": 4,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE",
+    "TIME GU AUGUSTO",
+    "TIME GU BIRO",
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "35",
+   "escola": "E.E. PROF. ANTONIETA DI LASCIO OZEKI",
+   "bairro": "RIO COTIA",
+   "atila": 2,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "352",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "358",
+   "escola": "E.E. FERNÃO DIAS PAES LEME",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 5,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "359",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "36",
+   "escola": "E.E. PROF. ANTONIETA DI LASCIO OZEKI",
+   "bairro": "RIO COTIA",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "370",
+   "escola": "E.E. VILA SÃO JOAQUIM II",
+   "bairro": "JARDIM LEONOR",
+   "atila": 7,
+   "alex": 8,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "380",
+   "escola": "E.M. PROF. OTILIA FREIRE DOS SANTOS SHIMADA",
+   "bairro": "JARDIM SABIÁ",
+   "atila": 3,
+   "alex": 3,
+   "n": 2,
+   "equipes": [
+    "TIME GU BIRO",
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "383",
+   "escola": "E.E. FERNÃO DIAS PAES LEME",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 3,
+   "alex": 3,
+   "n": 2,
+   "equipes": [
+    "TIME GU BIRO",
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "384",
+   "escola": "E.M. JARDIM PANORAMA",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 11,
+   "alex": 10,
+   "n": 5,
+   "equipes": [
+    "TIME FB MARIVALDO",
+    "TIME GU ADALTO_FELIPE",
+    "TIME GU KIKO",
+    "TIME MQ FELIPE",
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "39",
+   "escola": "E.E. PROF. ANTONIETA DI LASCIO OZEKI",
+   "bairro": "RIO COTIA",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "394",
+   "escola": "E.M. CRIANÇAS DE COTIA I",
+   "bairro": "PARQUE MIGUEL MIRIZOLA",
+   "atila": 5,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "4",
+   "escola": "E.E. BATISTA CEPELOS",
+   "bairro": "CENTRO",
+   "atila": 4,
+   "alex": 3,
+   "n": 2,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "400",
+   "escola": "E.E. VILA SÃO JOAQUIM II",
+   "bairro": "JARDIM LEONOR",
+   "atila": 7,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "402",
+   "escola": "E.M. JARDIM PANORAMA",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 5,
+   "alex": 3,
+   "n": 2,
+   "equipes": [
+    "TIME GU AUGUSTO",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "411",
+   "escola": "E.M. FRANCISCA MANOEL DE OLIVEIRA",
+   "bairro": "PORTÃO",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "413",
+   "escola": "E.E. FERNANDO NOBRE",
+   "bairro": "JARDIM GUERREIRO",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "415",
+   "escola": "E.M. PROF. OTILIA FREIRE DOS SANTOS SHIMADA",
+   "bairro": "JARDIM SABIÁ",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "427",
+   "escola": "E.M. FRANCISCO NUNES DE OLIVEIRA",
+   "bairro": "VILA MONTE SERRAT",
+   "atila": 4,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "429",
+   "escola": "E.E. VILA SÃO JOAQUIM II",
+   "bairro": "JARDIM LEONOR",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "438",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "439",
+   "escola": "E.M. PROF. OTILIA FREIRE DOS SANTOS SHIMADA",
+   "bairro": "JARDIM SABIÁ",
+   "atila": 2,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME GU BIRO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "442",
+   "escola": "E.M. JARDIM PANORAMA",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 4,
+   "alex": 4,
+   "n": 3,
+   "equipes": [
+    "TIME FB MARIVALDO",
+    "TIME GU AUGUSTO",
+    "TIME GU BIRO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "445",
+   "escola": "E.E. FERNÃO DIAS PAES LEME",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 3,
+   "alex": 2,
+   "n": 3,
+   "equipes": [
+    "TIME GU NALDO",
+    "TIME RON LANGO",
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "455",
+   "escola": "E.E. VILA SÃO JOAQUIM II",
+   "bairro": "JARDIM LEONOR",
+   "atila": 7,
+   "alex": 8,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "458",
+   "escola": "E.M. JOR. MARIA DO CARMO DE ALMEIDA",
+   "bairro": "JARDIM ESTELA MARIS",
+   "atila": 4,
+   "alex": 5,
+   "n": 2,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "469",
+   "escola": "E.M. CRIANÇAS DE COTIA I",
+   "bairro": "PARQUE MIGUEL MIRIZOLA",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "473",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 16,
+   "alex": 11,
+   "n": 3,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE",
+    "TIME GU KIKO",
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "485",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "487",
+   "escola": "E.M. JOCINÉIA DE MELO",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "488",
+   "escola": "E.M. PAULO ZINGG",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 9,
+   "alex": 11,
+   "n": 3,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE",
+    "TIME GU BIRO",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "493",
+   "escola": "E.E. VILA SÃO JOAQUIM II",
+   "bairro": "JARDIM LEONOR",
+   "atila": 12,
+   "alex": 12,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "495",
+   "escola": "E.M. JARDIM PANORAMA",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 9,
+   "alex": 9,
+   "n": 2,
+   "equipes": [
+    "TIME GU AUGUSTO",
+    "TIME GU KIKO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "502",
+   "escola": "E.M. FRANCISCA MANOEL DE OLIVEIRA",
+   "bairro": "PORTÃO",
+   "atila": 3,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "510",
+   "escola": "E.E. PROF. CARLOS DIAS DE SANTANNA",
+   "bairro": "JARDIM DOS IPÊS",
+   "atila": 1,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "519",
+   "escola": "E.E. FERNANDO NOBRE",
+   "bairro": "JARDIM GUERREIRO",
+   "atila": 0,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "520",
+   "escola": "E.E. VILA SÃO JOAQUIM II",
+   "bairro": "JARDIM LEONOR",
+   "atila": 4,
+   "alex": 3,
+   "n": 2,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "533",
+   "escola": "E.M. PAULO ZINGG",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 8,
+   "alex": 7,
+   "n": 4,
+   "equipes": [
+    "TIME FB DANILO PÃO",
+    "TIME GU BIRO",
+    "TIME GU KIKO",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "542",
+   "escola": "E.M. FRANCISCO NUNES DE OLIVEIRA",
+   "bairro": "VILA MONTE SERRAT",
+   "atila": 5,
+   "alex": 5,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "547",
+   "escola": "E.E. PROF. ANTONIETA DI LASCIO OZEKI",
+   "bairro": "RIO COTIA",
+   "atila": 5,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "557",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 12,
+   "alex": 11,
+   "n": 3,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME GU ADALTO_FELIPE",
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "559",
+   "escola": "E.M. JOR. MARIA DO CARMO DE ALMEIDA",
+   "bairro": "JARDIM ESTELA MARIS",
+   "atila": 6,
+   "alex": 5,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "566",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 7,
+   "alex": 9,
+   "n": 3,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE",
+    "TIME MQ BARRIGA",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "568",
+   "escola": "E.M. BAIRRO DO CAPUTERA",
+   "bairro": "CAPUTERA",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "570",
+   "escola": "E.E. VILA SÃO JOAQUIM II",
+   "bairro": "JARDIM LEONOR",
+   "atila": 6,
+   "alex": 6,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "579",
+   "escola": "E.M. JARDIM PANORAMA",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "581",
+   "escola": "E.M. MALVINA DE CASTRO",
+   "bairro": "JARDIM ROSEMARY",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "582",
+   "escola": "E.M. PAULO ZINGG",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 9,
+   "alex": 8,
+   "n": 6,
+   "equipes": [
+    "TIME FB MARIVALDO",
+    "TIME GU BIRO",
+    "TIME GU KIKO",
+    "TIME GU NALDO",
+    "TIME GU RODRIGO",
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "583",
+   "escola": "E.M. JOCINÉIA DE MELO",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "586",
+   "escola": "E.M. SIDRONIA NUNES PIRES",
+   "bairro": "JARDIM LEONOR",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "591",
+   "escola": "E.M. HONORIO DE SYLOS",
+   "bairro": "PARQUE ALEXANDRE",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "593",
+   "escola": "E.M. SIDRONIA NUNES PIRES",
+   "bairro": "JARDIM LEONOR",
+   "atila": 3,
+   "alex": 5,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "595",
+   "escola": "E.E. REPÚBLICA DO PERU",
+   "bairro": "JARDIM NOVA COIMBRA",
+   "atila": 8,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "597",
+   "escola": "E.M. JARDIM PANORAMA",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 10,
+   "alex": 9,
+   "n": 4,
+   "equipes": [
+    "TIME GU AUGUSTO",
+    "TIME GU BIRO",
+    "TIME GU KIKO",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "599",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 5,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "602",
+   "escola": "E.M. FRANCISCO NUNES DE OLIVEIRA",
+   "bairro": "VILA MONTE SERRAT",
+   "atila": 0,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME GU KIKO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "604",
+   "escola": "E.M. JOCINÉIA DE MELO",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 3,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "606",
+   "escola": "E.M. PAULO ZINGG",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 10,
+   "alex": 11,
+   "n": 4,
+   "equipes": [
+    "TIME GU BIRO",
+    "TIME MQ BARRIGA",
+    "TIME MQ FELIPE",
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "613",
+   "escola": "E.M. VICENTE MACIEL",
+   "bairro": "JARDIM CLÁUDIO",
+   "atila": 3,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "616",
+   "escola": "E.E. FERNANDO NOBRE",
+   "bairro": "JARDIM GUERREIRO",
+   "atila": 0,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "620",
+   "escola": "E.M. PAULO ZINGG",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 9,
+   "alex": 9,
+   "n": 4,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME FB MARIVALDO",
+    "TIME GU ADALTO_FELIPE",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "622",
+   "escola": "COLÉGIO RIO BRANCO",
+   "bairro": "GRANJA VIANA",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "628",
+   "escola": "E.M. JARDIM ROSALINA",
+   "bairro": "JARDIM ROSALINA",
+   "atila": 6,
+   "alex": 5,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "629",
+   "escola": "E.M. HONORIO DE SYLOS",
+   "bairro": "PARQUE ALEXANDRE",
+   "atila": 5,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "63",
+   "escola": "E.E. VINÍCIUS DE MORAES",
+   "bairro": "GRANJA VIANA",
+   "atila": 1,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "632",
+   "escola": "E.M. PAULO ZINGG",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 10,
+   "alex": 10,
+   "n": 4,
+   "equipes": [
+    "TIME FB MARIVALDO",
+    "TIME GU KIKO",
+    "TIME MQ BARRIGA",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "634",
+   "escola": "E.M. JARDIM PANORAMA",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 9,
+   "alex": 8,
+   "n": 2,
+   "equipes": [
+    "TIME GU AUGUSTO",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "636",
+   "escola": "E.E. REPÚBLICA DO PERU",
+   "bairro": "JARDIM NOVA COIMBRA",
+   "atila": 7,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "64",
+   "escola": "E.M. JOAQUIM PEREIRA DA SILVA",
+   "bairro": "VILA SÃO JOAQUIM",
+   "atila": 3,
+   "alex": 6,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "644",
+   "escola": "E.E. REPÚBLICA DO PERU",
+   "bairro": "JARDIM NOVA COIMBRA",
+   "atila": 6,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "647",
+   "escola": "C.E. PROF. YVETH NADER CAVALCANTE",
+   "bairro": "JARDIM MARANHÃO",
+   "atila": 0,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "65",
+   "escola": "E.M. JOAQUIM PEREIRA DA SILVA",
+   "bairro": "VILA SÃO JOAQUIM",
+   "atila": 3,
+   "alex": 3,
+   "n": 2,
+   "equipes": [
+    "TIME FB DANILO PÃO",
+    "TIME GU KIKO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "650",
+   "escola": "E.M. VICENTE MACIEL",
+   "bairro": "JARDIM CLÁUDIO",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "653",
+   "escola": "E.M BAIRRO SÃO MIGUEL",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 12,
+   "alex": 11,
+   "n": 4,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE",
+    "TIME GU NALDO",
+    "TIME MQ FELIPE",
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "657",
+   "escola": "E.M. JOCINÉIA DE MELO",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 4,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "658",
+   "escola": "E.E. FERNANDO NOBRE",
+   "bairro": "JARDIM GUERREIRO",
+   "atila": 0,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "66",
+   "escola": "E.M. JOAQUIM PEREIRA DA SILVA",
+   "bairro": "VILA SÃO JOAQUIM",
+   "atila": 4,
+   "alex": 5,
+   "n": 2,
+   "equipes": [
+    "TIME GU KIKO",
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "662",
+   "escola": "E.M BAIRRO SÃO MIGUEL",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 9,
+   "alex": 11,
+   "n": 4,
+   "equipes": [
+    "TIME FB MARIVALDO",
+    "TIME GU ADALTO_FELIPE",
+    "TIME GU KIKO",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "663",
+   "escola": "E.M. SILVIO PEDROSO",
+   "bairro": "CHÁCARA VISTA ALEGRE",
+   "atila": 2,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "668",
+   "escola": "E.M. JOCINÉIA DE MELO",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 2,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "669",
+   "escola": "E.M. SILVIO PEDROSO",
+   "bairro": "CHÁCARA VISTA ALEGRE",
+   "atila": 2,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "67",
+   "escola": "E.M. JOAQUIM PEREIRA DA SILVA",
+   "bairro": "VILA SÃO JOAQUIM",
+   "atila": 2,
+   "alex": 5,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "678",
+   "escola": "E.E. FERNÃO DIAS PAES LEME",
+   "bairro": "JARDIM PETROPOLIS",
+   "atila": 3,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME GU BIRO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "68",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 7,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME GU AUGUSTO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "680",
+   "escola": "E.M BAIRRO SÃO MIGUEL",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 6,
+   "alex": 5,
+   "n": 2,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "69",
+   "escola": "E.E. KENKITI SIMOMOTO",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 4,
+   "alex": 5,
+   "n": 2,
+   "equipes": [
+    "TIME FB MARIVALDO",
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "743",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "8",
+   "escola": "E.E. BATISTA CEPELOS",
+   "bairro": "CENTRO",
+   "atila": 6,
+   "alex": 6,
+   "n": 2,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "832",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME GU BIRO"
+   ]
+  },
+  {
+   "z": "227",
+   "s": "9",
+   "escola": "E.E. BATISTA CEPELOS",
+   "bairro": "CENTRO",
+   "atila": 1,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "1",
+   "escola": "EE. PROF. ODAIR PACHECO PEDROSO",
+   "bairro": "ATALAIA",
+   "atila": 14,
+   "alex": 11,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "103",
+   "escola": "EM. PROF. OSNY FLEURY DA SILVEIRA",
+   "bairro": "ATALAIA",
+   "atila": 15,
+   "alex": 15,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "106",
+   "escola": "EM. PROF. OSNY FLEURY DA SILVEIRA",
+   "bairro": "ATALAIA",
+   "atila": 11,
+   "alex": 11,
+   "n": 1,
+   "equipes": [
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "107",
+   "escola": "EM. PROF. OSNY FLEURY DA SILVEIRA",
+   "bairro": "ATALAIA",
+   "atila": 15,
+   "alex": 14,
+   "n": 2,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "19",
+   "escola": "EE. ROQUE CELESTINO PIRES",
+   "bairro": "CENTRO (CAUCAIA DO ALTO)",
+   "atila": 5,
+   "alex": 5,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "211",
+   "escola": "CE. DO ATALAIA",
+   "bairro": "JARDIM LAVAPÉ",
+   "atila": 6,
+   "alex": 6,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "221",
+   "escola": "EE. TENENTE ERNESTO CAETANO DE SOUZA",
+   "bairro": "JARDIM ARARUAMA",
+   "atila": 12,
+   "alex": 10,
+   "n": 3,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE",
+    "TIME GU RODRIGO",
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "224",
+   "escola": "EM. ROSA AUGUSTA DE MORAES",
+   "bairro": "PARQUE MIRANTE DA MATA",
+   "atila": 1,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "230",
+   "escola": "CE. DO ATALAIA",
+   "bairro": "JARDIM LAVAPÉ",
+   "atila": 11,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "231",
+   "escola": "ESCOLA MUNICIPAL MARIA APARECIDA DE OLIVEIRA PEDROSO, (SANDRA)",
+   "bairro": "JARDIM SANDRA",
+   "atila": 8,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME GU BIRO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "237",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "241",
+   "escola": "CE. DO ATALAIA",
+   "bairro": "JARDIM LAVAPÉ",
+   "atila": 15,
+   "alex": 15,
+   "n": 1,
+   "equipes": [
+    "TIME MQ FELIPE"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "244",
+   "escola": "EE. SIDRÔNIA NUNES PIRES",
+   "bairro": "CENTRO (CAUCAIA DO ALTO)",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "246",
+   "escola": "ESCOLA MUNICIPAL MARIA APARECIDA DE OLIVEIRA PEDROSO, (SANDRA)",
+   "bairro": "JARDIM SANDRA",
+   "atila": 7,
+   "alex": 4,
+   "n": 2,
+   "equipes": [
+    "TIME GU KIKO",
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "247",
+   "escola": "EM. BENEDICTA VAZ PEDROSA DE ALBUQUERQUE",
+   "bairro": "BAIRRO DOS PEREIRAS",
+   "atila": 5,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "255",
+   "escola": "EM. ROSA AUGUSTA DE MORAES",
+   "bairro": "PARQUE MIRANTE DA MATA",
+   "atila": 4,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "273",
+   "escola": "ESCOLA MUNICIPAL MARIA APARECIDA DE OLIVEIRA PEDROSO, (SANDRA)",
+   "bairro": "JARDIM SANDRA",
+   "atila": 6,
+   "alex": 5,
+   "n": 1,
+   "equipes": [
+    "TIME GU ADALTO_FELIPE"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "29",
+   "escola": "EE. PROFA. EROTIDES APARECIDA DE OLIVEIRA SILVA",
+   "bairro": "AGUASSAÍ",
+   "atila": 3,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "295",
+   "escola": "EE. PROF. JOSÉ BARRETO",
+   "bairro": "MORRO GRANDE",
+   "atila": 10,
+   "alex": 10,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "298",
+   "escola": "ESCOLA MUNICIPAL MARIA APARECIDA DE OLIVEIRA PEDROSO, (SANDRA)",
+   "bairro": "JARDIM SANDRA",
+   "atila": 2,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "304",
+   "escola": "E.M. JARDIM ISIS",
+   "bairro": "JARDIM ÍSIS",
+   "atila": 4,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "305",
+   "escola": "EE. SIDRÔNIA NUNES PIRES",
+   "bairro": "CENTRO (CAUCAIA DO ALTO)",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "307",
+   "escola": "CE ODARIA MENDONÇA DA FONSECA",
+   "bairro": "JARDIM SANDRA",
+   "atila": 6,
+   "alex": 5,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "309",
+   "escola": "CE JARDIM ARARUAMA",
+   "bairro": "ARARUAMA",
+   "atila": 1,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "314",
+   "escola": "CE JOSE ROBERTO MACENO",
+   "bairro": "PARQUE MIRANTE DA MATA",
+   "atila": 3,
+   "alex": 2,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "34",
+   "escola": "EE. DEPUTADO DAGOBERTO SALES FILHO",
+   "bairro": "CENTRO (CAUCAIA DO ALTO)",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "35",
+   "escola": "EE. DEPUTADO DAGOBERTO SALES FILHO",
+   "bairro": "CENTRO (CAUCAIA DO ALTO)",
+   "atila": 2,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "37",
+   "escola": "EE. PROF. JOSÉ BARRETO",
+   "bairro": "MORRO GRANDE",
+   "atila": 2,
+   "alex": 1,
+   "n": 1,
+   "equipes": [
+    "TIME GU KIKO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "4",
+   "escola": "EE. PROF. ODAIR PACHECO PEDROSO",
+   "bairro": "ATALAIA",
+   "atila": 10,
+   "alex": 10,
+   "n": 2,
+   "equipes": [
+    "TIME DN MOISES",
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "42",
+   "escola": "EE. TENENTE ERNESTO CAETANO DE SOUZA",
+   "bairro": "JARDIM ARARUAMA",
+   "atila": 9,
+   "alex": 9,
+   "n": 1,
+   "equipes": [
+    "TIME FB MARIVALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "44",
+   "escola": "EE. TENENTE ERNESTO CAETANO DE SOUZA",
+   "bairro": "JARDIM ARARUAMA",
+   "atila": 10,
+   "alex": 10,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "46",
+   "escola": "EE. TENENTE ERNESTO CAETANO DE SOUZA",
+   "bairro": "JARDIM ARARUAMA",
+   "atila": 14,
+   "alex": 11,
+   "n": 2,
+   "equipes": [
+    "TIME GU NALDO",
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "74",
+   "escola": "EE. REPÚBLICA DA COSTA RICA",
+   "bairro": "ÁGUA ESPRAIADA (CAUCAIA DO ALTO)",
+   "atila": 4,
+   "alex": 4,
+   "n": 1,
+   "equipes": [
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "79",
+   "escola": "EM. BENEDICTA VAZ PEDROSA DE ALBUQUERQUE",
+   "bairro": "BAIRRO DOS PEREIRAS",
+   "atila": 2,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME MQ BARRIGA"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "80",
+   "escola": "CE. DO ATALAIA",
+   "bairro": "JARDIM LAVAPÉ",
+   "atila": 13,
+   "alex": 10,
+   "n": 1,
+   "equipes": [
+    "TIME FB DANILO PÃO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "86",
+   "escola": "EM. PROF. SAMUEL DA SILVA FILHO (MIRANTE II)",
+   "bairro": "PARQUE MIRANTE DA MATA",
+   "atila": 2,
+   "alex": 3,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "87",
+   "escola": "EM. PROF. SAMUEL DA SILVA FILHO (MIRANTE II)",
+   "bairro": "PARQUE MIRANTE DA MATA",
+   "atila": 6,
+   "alex": 7,
+   "n": 1,
+   "equipes": [
+    "TIME RON MARCIO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "92",
+   "escola": "EE. TENENTE ERNESTO CAETANO DE SOUZA",
+   "bairro": "JARDIM ARARUAMA",
+   "atila": 10,
+   "alex": 11,
+   "n": 1,
+   "equipes": [
+    "TIME RON LANGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "94",
+   "escola": "ESCOLA MUNICIPAL MARIA APARECIDA DE OLIVEIRA PEDROSO, (SANDRA)",
+   "bairro": "JARDIM SANDRA",
+   "atila": 6,
+   "alex": 1,
+   "n": 2,
+   "equipes": [
+    "TIME GU AUGUSTO",
+    "TIME GU RODRIGO"
+   ]
+  },
+  {
+   "z": "286",
+   "s": "96",
+   "escola": "ESCOLA MUNICIPAL MARIA APARECIDA DE OLIVEIRA PEDROSO, (SANDRA)",
+   "bairro": "JARDIM SANDRA",
+   "atila": 6,
+   "alex": 6,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  },
+  {
+   "z": "315",
+   "s": "304",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME GU NALDO"
+   ]
+  },
+  {
+   "z": "388",
+   "s": "294",
+   "escola": "",
+   "bairro": "",
+   "atila": 0,
+   "alex": 0,
+   "n": 1,
+   "equipes": [
+    "TIME DN MOISES"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+# Arquivos temporários e logs
+*.log
+verif.log
+sec.log
+deck_export.log
+ler_resumo.log
+
+# Imagens avulsas de teste
+vid_frame*.png
+
+# Excel de conferência intermediário (opcional - descomente se não quiser versionar)
+# *CONFERENCIA*.xlsx

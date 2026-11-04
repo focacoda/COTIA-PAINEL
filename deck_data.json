@@ -1,0 +1,433 @@
+{
+ "teams": [
+  {
+   "name": "TIME MQ FELIPE",
+   "secoes_total": 16,
+   "secoes_excl": 1,
+   "secoes_shared": 15,
+   "atila_excl": 15,
+   "atila_shared": 130,
+   "alex_excl": 15,
+   "alex_shared": 128,
+   "secoes_sem_atila": 0,
+   "secoes_sem_alex": 0,
+   "eleitores": 8970,
+   "bairros": [
+    "JARDIM SÃO MIGUEL",
+    "JARDIM PANORAMA",
+    "JARDIM LAVAPÉ"
+   ],
+   "atila_total": 145,
+   "alex_total": 143,
+   "rank": 1
+  },
+  {
+   "name": "TIME GU ADALTO_FELIPE",
+   "secoes_total": 16,
+   "secoes_excl": 4,
+   "secoes_shared": 12,
+   "atila_excl": 21,
+   "atila_shared": 118,
+   "alex_excl": 16,
+   "alex_shared": 113,
+   "secoes_sem_atila": 0,
+   "secoes_sem_alex": 0,
+   "eleitores": 9182,
+   "bairros": [
+    "JARDIM PANORAMA",
+    "JARDIM SÃO MIGUEL",
+    "PORTÃO"
+   ],
+   "atila_total": 139,
+   "alex_total": 129,
+   "rank": 2
+  },
+  {
+   "name": "TIME FB MARIVALDO",
+   "secoes_total": 18,
+   "secoes_excl": 9,
+   "secoes_shared": 9,
+   "atila_excl": 63,
+   "atila_shared": 75,
+   "alex_excl": 58,
+   "alex_shared": 78,
+   "secoes_sem_atila": 0,
+   "secoes_sem_alex": 0,
+   "eleitores": 9524,
+   "bairros": [
+    "JARDIM PANORAMA",
+    "JARDIM SÃO MIGUEL",
+    "PARQUE ALEXANDRE"
+   ],
+   "atila_total": 138,
+   "alex_total": 136,
+   "rank": 3
+  },
+  {
+   "name": "TIME DN MOISES",
+   "secoes_total": 23,
+   "secoes_excl": 12,
+   "secoes_shared": 11,
+   "atila_excl": 46,
+   "atila_shared": 79,
+   "alex_excl": 45,
+   "alex_shared": 78,
+   "secoes_sem_atila": 4,
+   "secoes_sem_alex": 3,
+   "eleitores": 10898,
+   "bairros": [
+    "JARDIM SÃO MIGUEL",
+    "JARDIM LEONOR"
+   ],
+   "atila_total": 125,
+   "alex_total": 123,
+   "rank": 4
+  },
+  {
+   "name": "TIME GU AUGUSTO",
+   "secoes_total": 20,
+   "secoes_excl": 9,
+   "secoes_shared": 11,
+   "atila_excl": 39,
+   "atila_shared": 79,
+   "alex_excl": 40,
+   "alex_shared": 73,
+   "secoes_sem_atila": 0,
+   "secoes_sem_alex": 0,
+   "eleitores": 11268,
+   "bairros": [
+    "JARDIM PANORAMA",
+    "JARDIM NOVA COIMBRA",
+    "JARDIM ESTELA MARIS"
+   ],
+   "atila_total": 118,
+   "alex_total": 113,
+   "rank": 5
+  },
+  {
+   "name": "TIME MQ BARRIGA",
+   "secoes_total": 17,
+   "secoes_excl": 7,
+   "secoes_shared": 10,
+   "atila_excl": 22,
+   "atila_shared": 90,
+   "alex_excl": 22,
+   "alex_shared": 85,
+   "secoes_sem_atila": 3,
+   "secoes_sem_alex": 3,
+   "eleitores": 9124,
+   "bairros": [
+    "JARDIM PANORAMA",
+    "JARDIM SÃO MIGUEL",
+    "BAIRRO DOS PEREIRAS"
+   ],
+   "atila_total": 112,
+   "alex_total": 107,
+   "rank": 6
+  },
+  {
+   "name": "TIME GU NALDO",
+   "secoes_total": 20,
+   "secoes_excl": 11,
+   "secoes_shared": 9,
+   "atila_excl": 30,
+   "atila_shared": 77,
+   "alex_excl": 30,
+   "alex_shared": 67,
+   "secoes_sem_atila": 2,
+   "secoes_sem_alex": 2,
+   "eleitores": 9978,
+   "bairros": [
+    "JARDIM PETROPOLIS",
+    "ATALAIA"
+   ],
+   "atila_total": 107,
+   "alex_total": 97,
+   "rank": 7
+  },
+  {
+   "name": "TIME GU KIKO",
+   "secoes_total": 16,
+   "secoes_excl": 5,
+   "secoes_shared": 11,
+   "atila_excl": 7,
+   "atila_shared": 96,
+   "alex_excl": 6,
+   "alex_shared": 87,
+   "secoes_sem_atila": 2,
+   "secoes_sem_alex": 1,
+   "eleitores": 7990,
+   "bairros": [
+    "JARDIM SÃO MIGUEL",
+    "JARDIM PANORAMA",
+    "VILA SÃO JOAQUIM"
+   ],
+   "atila_total": 103,
+   "alex_total": 93,
+   "rank": 8
+  },
+  {
+   "name": "TIME FB DANILO PÃO",
+   "secoes_total": 20,
+   "secoes_excl": 16,
+   "secoes_shared": 4,
+   "atila_excl": 71,
+   "atila_shared": 21,
+   "alex_excl": 73,
+   "alex_shared": 19,
+   "secoes_sem_atila": 4,
+   "secoes_sem_alex": 1,
+   "eleitores": 10814,
+   "bairros": [
+    "JARDIM LEONOR",
+    "VILA SÃO JOAQUIM",
+    "JARDIM LAVAPÉ"
+   ],
+   "atila_total": 92,
+   "alex_total": 92,
+   "rank": 9
+  },
+  {
+   "name": "TIME GU BIRO",
+   "secoes_total": 16,
+   "secoes_excl": 5,
+   "secoes_shared": 11,
+   "atila_excl": 17,
+   "atila_shared": 71,
+   "alex_excl": 16,
+   "alex_shared": 73,
+   "secoes_sem_atila": 1,
+   "secoes_sem_alex": 1,
+   "eleitores": 8660,
+   "bairros": [
+    "JARDIM PANORAMA",
+    "JARDIM SÃO MIGUEL",
+    "JARDIM PETROPOLIS"
+   ],
+   "atila_total": 88,
+   "alex_total": 89,
+   "rank": 10
+  },
+  {
+   "name": "TIME RON LANGO",
+   "secoes_total": 19,
+   "secoes_excl": 16,
+   "secoes_shared": 3,
+   "atila_excl": 56,
+   "atila_shared": 20,
+   "alex_excl": 53,
+   "alex_shared": 20,
+   "secoes_sem_atila": 1,
+   "secoes_sem_alex": 2,
+   "eleitores": 10076,
+   "bairros": [
+    "CENTRO (CAUCAIA DO ALTO)",
+    "JARDIM ARARUAMA",
+    "JARDIM LEONOR"
+   ],
+   "atila_total": 76,
+   "alex_total": 73,
+   "rank": 11
+  },
+  {
+   "name": "TIME RON MARCIO",
+   "secoes_total": 15,
+   "secoes_excl": 10,
+   "secoes_shared": 5,
+   "atila_excl": 29,
+   "atila_shared": 39,
+   "alex_excl": 25,
+   "alex_shared": 37,
+   "secoes_sem_atila": 1,
+   "secoes_sem_alex": 1,
+   "eleitores": 8652,
+   "bairros": [
+    "JARDIM PETROPOLIS",
+    "JARDIM SÃO MIGUEL",
+    "CENTRO"
+   ],
+   "atila_total": 68,
+   "alex_total": 62,
+   "rank": 12
+  },
+  {
+   "name": "TIME GU RODRIGO",
+   "secoes_total": 18,
+   "secoes_excl": 12,
+   "secoes_shared": 6,
+   "atila_excl": 18,
+   "atila_shared": 48,
+   "alex_excl": 23,
+   "alex_shared": 38,
+   "secoes_sem_atila": 4,
+   "secoes_sem_alex": 3,
+   "eleitores": 8446,
+   "bairros": [
+    "RIO COTIA",
+    "GRANJA VIANA"
+   ],
+   "atila_total": 66,
+   "alex_total": 61,
+   "rank": 13
+  }
+ ],
+ "summary": {
+  "secoes_unicas": 158,
+  "secoes_exclusivas": 117,
+  "secoes_compartilhadas": 41,
+  "atribuicoes": 278,
+  "equipes": 13,
+  "atila_cotia": 1874,
+  "alex_cotia": 1826,
+  "atila_secoes": 467,
+  "alex_secoes": 476,
+  "validos_est": 149926,
+  "validos_fed": 149926,
+  "secoes_cotia": 558,
+  "secoes_com_voto": 142
+ },
+ "bairros": [
+  {
+   "bairro": "JARDIM PANORAMA",
+   "secoes": 18
+  },
+  {
+   "bairro": "JARDIM LEONOR",
+   "secoes": 10
+  },
+  {
+   "bairro": "PORTÃO",
+   "secoes": 10
+  },
+  {
+   "bairro": "JARDIM PETROPOLIS",
+   "secoes": 10
+  },
+  {
+   "bairro": "JARDIM SÃO MIGUEL",
+   "secoes": 9
+  },
+  {
+   "bairro": "JARDIM SANDRA",
+   "secoes": 7
+  },
+  {
+   "bairro": "VILA SÃO JOAQUIM",
+   "secoes": 6
+  },
+  {
+   "bairro": "ATALAIA",
+   "secoes": 5
+  },
+  {
+   "bairro": "PARQUE MIRANTE DA MATA",
+   "secoes": 5
+  },
+  {
+   "bairro": "CENTRO",
+   "secoes": 5
+  },
+  {
+   "bairro": "JARDIM ARARUAMA",
+   "secoes": 5
+  }
+ ],
+ "top_secoes": [
+  {
+   "zona": "286",
+   "secao": "103",
+   "bairro": "ATALAIA",
+   "atila": 15,
+   "alex": 15,
+   "equipes": 1
+  },
+  {
+   "zona": "286",
+   "secao": "241",
+   "bairro": "JARDIM LAVAPÉ",
+   "atila": 15,
+   "alex": 15,
+   "equipes": 1
+  },
+  {
+   "zona": "286",
+   "secao": "107",
+   "bairro": "ATALAIA",
+   "atila": 15,
+   "alex": 14,
+   "equipes": 2
+  },
+  {
+   "zona": "227",
+   "secao": "302",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 14,
+   "alex": 13,
+   "equipes": 4
+  },
+  {
+   "zona": "227",
+   "secao": "473",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 16,
+   "alex": 11,
+   "equipes": 3
+  },
+  {
+   "zona": "286",
+   "secao": "1",
+   "bairro": "ATALAIA",
+   "atila": 14,
+   "alex": 11,
+   "equipes": 1
+  },
+  {
+   "zona": "286",
+   "secao": "46",
+   "bairro": "JARDIM ARARUAMA",
+   "atila": 14,
+   "alex": 11,
+   "equipes": 2
+  },
+  {
+   "zona": "227",
+   "secao": "493",
+   "bairro": "JARDIM LEONOR",
+   "atila": 12,
+   "alex": 12,
+   "equipes": 1
+  },
+  {
+   "zona": "227",
+   "secao": "557",
+   "bairro": "JARDIM PANORAMA",
+   "atila": 12,
+   "alex": 11,
+   "equipes": 3
+  },
+  {
+   "zona": "286",
+   "secao": "80",
+   "bairro": "JARDIM LAVAPÉ",
+   "atila": 13,
+   "alex": 10,
+   "equipes": 1
+  },
+  {
+   "zona": "227",
+   "secao": "653",
+   "bairro": "JARDIM SÃO MIGUEL",
+   "atila": 12,
+   "alex": 11,
+   "equipes": 4
+  },
+  {
+   "zona": "286",
+   "secao": "221",
+   "bairro": "JARDIM ARARUAMA",
+   "atila": 12,
+   "alex": 10,
+   "equipes": 3
+  }
+ ]
+}

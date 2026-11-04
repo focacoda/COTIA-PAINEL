@@ -1,0 +1,233 @@
+{
+ "teams": [
+  {
+   "nome": "TIME MQ FELIPE",
+   "declaradas": 21,
+   "unicas": 16,
+   "validas": 16,
+   "invalidas": [],
+   "at_n": 16,
+   "at_v": 145,
+   "al_n": 16,
+   "al_v": 143,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME FB MARIVALDO",
+   "declaradas": 21,
+   "unicas": 18,
+   "validas": 18,
+   "invalidas": [],
+   "at_n": 18,
+   "at_v": 138,
+   "al_n": 18,
+   "al_v": 136,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME GU ADALTO_FELIPE",
+   "declaradas": 21,
+   "unicas": 15,
+   "validas": 15,
+   "invalidas": [],
+   "at_n": 15,
+   "at_v": 125,
+   "al_n": 15,
+   "al_v": 116,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME DN MOISES",
+   "declaradas": 22,
+   "unicas": 22,
+   "validas": 19,
+   "invalidas": [
+    "388/294",
+    "227/743",
+    "227/438"
+   ],
+   "at_n": 18,
+   "at_v": 117,
+   "al_n": 19,
+   "al_v": 116,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME GU AUGUSTO",
+   "declaradas": 25,
+   "unicas": 19,
+   "validas": 19,
+   "invalidas": [],
+   "at_n": 19,
+   "at_v": 114,
+   "al_n": 19,
+   "al_v": 109,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME MQ BARRIGA",
+   "declaradas": 18,
+   "unicas": 16,
+   "validas": 15,
+   "invalidas": [
+    "227/113"
+   ],
+   "at_n": 13,
+   "at_v": 108,
+   "al_n": 13,
+   "al_v": 104,
+   "zero": 2,
+   "zero_list": [
+    "286/244",
+    "227/413"
+   ]
+  },
+  {
+   "nome": "TIME GU NALDO",
+   "declaradas": 20,
+   "unicas": 19,
+   "validas": 17,
+   "invalidas": [
+    "227/352",
+    "315/304"
+   ],
+   "at_n": 17,
+   "at_v": 105,
+   "al_n": 17,
+   "al_v": 95,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME GU KIKO",
+   "declaradas": 18,
+   "unicas": 15,
+   "validas": 15,
+   "invalidas": [],
+   "at_n": 14,
+   "at_v": 103,
+   "al_n": 15,
+   "al_v": 93,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME GU BIRO",
+   "declaradas": 18,
+   "unicas": 15,
+   "validas": 14,
+   "invalidas": [
+    "227/832"
+   ],
+   "at_n": 14,
+   "at_v": 84,
+   "al_n": 14,
+   "al_v": 85,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME FB DANILO PÃO",
+   "declaradas": 20,
+   "unicas": 19,
+   "validas": 19,
+   "invalidas": [],
+   "at_n": 15,
+   "at_v": 82,
+   "al_n": 18,
+   "al_v": 82,
+   "zero": 1,
+   "zero_list": [
+    "227/581"
+   ]
+  },
+  {
+   "nome": "TIME RON LANGO",
+   "declaradas": 20,
+   "unicas": 18,
+   "validas": 17,
+   "invalidas": [
+    "286/237"
+   ],
+   "at_n": 17,
+   "at_v": 72,
+   "al_n": 16,
+   "al_v": 70,
+   "zero": 0,
+   "zero_list": []
+  },
+  {
+   "nome": "TIME RON MARCIO",
+   "declaradas": 23,
+   "unicas": 14,
+   "validas": 14,
+   "invalidas": [],
+   "at_n": 13,
+   "at_v": 56,
+   "al_n": 13,
+   "al_v": 51,
+   "zero": 1,
+   "zero_list": [
+    "227/568"
+   ]
+  },
+  {
+   "nome": "TIME GU RODRIGO",
+   "declaradas": 18,
+   "unicas": 17,
+   "validas": 15,
+   "invalidas": [
+    "227/359",
+    "227/485"
+   ],
+   "at_n": 13,
+   "at_v": 52,
+   "al_n": 14,
+   "al_v": 50,
+   "zero": 1,
+   "zero_list": [
+    "227/622"
+   ]
+  }
+ ],
+ "totais": {
+  "secoes_declaradas": 153,
+  "secoes_validas": 143,
+  "invalidas": 10,
+  "vazias": 5,
+  "atila_cotia": 1874,
+  "alex_cotia": 1826
+ },
+ "vazias": [
+  {
+   "zona": "227",
+   "secao": "413",
+   "bairro": "JARDIM GUERREIRO"
+  },
+  {
+   "zona": "227",
+   "secao": "568",
+   "bairro": "CAPUTERA"
+  },
+  {
+   "zona": "227",
+   "secao": "581",
+   "bairro": "JARDIM ROSEMARY"
+  },
+  {
+   "zona": "227",
+   "secao": "622",
+   "bairro": "GRANJA VIANA"
+  },
+  {
+   "zona": "286",
+   "secao": "244",
+   "bairro": "CENTRO (CAUCAIA DO ALTO)"
+  }
+ ]
+}

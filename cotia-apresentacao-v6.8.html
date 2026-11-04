@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cotia 2026 · Leitura da Equipe</title>
+<style>
+:root{color-scheme:light;--paper:#F7F4EE;--ink:#15171B;--muted:#6B6A64;--line:#DCD5C8;--atila:#0E4C5A;--alex:#C2410C;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5}
+.slide{min-height:100vh;padding:clamp(24px,5vw,64px);display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line)}
+.wrap{max-width:1100px;margin:0 auto;width:100%}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:24px;height:1px;background:currentColor;opacity:.5}
+h1{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;font-size:clamp(32px,6vw,64px);line-height:1.05}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3.5vw,42px);letter-spacing:-.02em;line-height:1.1;margin:12px 0 16px}
+.lede{font-size:clamp(13px,1.4vw,16px);line-height:1.6;color:var(--muted);max-width:70ch}
+.chip{display:inline-block;font-size:11px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);margin-right:6px;margin-top:6px}
+.chip.a{border-color:rgba(14,76,90,.4);color:var(--atila);background:rgba(14,76,90,.06)}
+.chip.x{border-color:rgba(194,65,12,.35);color:var(--alex);background:rgba(194,65,12,.06)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:20px 0}
+.kpi{border-top:2px solid var(--ink);padding-top:12px}
+.kpi .n{font-family:var(--serif);font-size:clamp(24px,4vw,48px);line-height:1;letter-spacing:-.03em}
+.kpi .l{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.4}
+.kpi.a{border-top-color:var(--atila)}.kpi.a .n{color:var(--atila)}
+.kpi.x{border-top-color:var(--alex)}.kpi.x .n{color:var(--alex)}
+.rank{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+.row{display:grid;grid-template-columns:minmax(100px,180px) 1fr minmax(60px,90px);gap:12px;align-items:center}
+.row .nm{font-size:clamp(11px,1.1vw,13px);font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{height:16px;display:flex;border-radius:2px;overflow:hidden;background:var(--paper)}
+.bar span{display:block;height:100%}
+.seg-a{background:var(--atila)}.seg-x{background:var(--alex)}.seg-g{background:repeating-linear-gradient(135deg,rgba(168,163,152,.3) 0 4px,rgba(168,163,152,.1) 4px 8px)}
+.row .val{text-align:right;font-size:clamp(11px,1.1vw,13px);font-weight:700}
+.tbl{width:100%;border-collapse:collapse;font-size:12px;margin-top:20px}
+.tbl th{text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:8px;border-bottom:1px solid var(--ink)}
+.tbl td{padding:8px;border-bottom:1px solid var(--line);text-align:right;font-size:12px}
+.tbl tr:last-child td{border-bottom:none}
+.tbl .a{color:var(--atila);font-weight:700}.tbl .x{color:var(--alex);font-weight:700}
+.note{border-left:2px solid var(--ink);padding:2px 0 2px 14px;margin:16px 0;max-width:60ch}
+.note h3{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:700}
+.note p{font-size:clamp(12px,1.2vw,14px);line-height:1.6;color:#3A3A36}
+.bullets{display:flex;flex-direction:column;gap:14px;max-width:80ch;margin-top:20px}
+.bullet{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start}
+.bullet .num{font-family:var(--serif);font-size:clamp(12px,1.4vw,16px);color:var(--muted)}
+.bullet p{font-size:clamp(12px,1.3vw,15px);line-height:1.6;color:#3A3A36}
+@media(max-width:768px){.slide{padding:20px}.kpis{grid-template-columns:1fr 1fr}.row{grid-template-columns:minmax(80px,40%) 1fr minmax(50px,60px)}}
+@media print{.slide{page-break-after:always;break-after:page}}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: CAPA -->
+<section class="slide">
+<div class="wrap">
+<div class="eyebrow">Campanha 2026 · Cotia</div>
+<h1>Onde cada equipe<br>entrega <em style="color:var(--alex)">voto</em>.</h1>
+<p class="lede" style="margin-top:20px">Cruzamento das zonas e seções declaradas pelas 13 equipes com a votação real de Átila Jacomussi e Alexandre Pereira em Cotia. 158 seções únicas, cobertura de 28% do município.</p>
+<div style="margin-top:24px">
+<span class="chip a">Átila Jacomussi · Estadual</span>
+<span class="chip x">Alexandre Pereira · Federal</span>
+<span class="chip">1.874 + 1.826 votos</span>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 2: RETRATO -->
+<section class="slide">
+<div class="wrap">
+<div class="eyebrow">Retrato da operação</div>
+<h2>A equipe cobre <em>28%</em> de Cotia</h2>
+<div class="kpis">
+<div class="kpi"><div class="n">158</div><div class="l">seções únicas cobertas<br>de 558 em Cotia</div></div>
+<div class="kpi"><div class="n">28%</div><div class="l">do município sob<br>alguma equipe</div></div>
+<div class="kpi a"><div class="n">1.874</div><div class="l">votos de Átila<br>em toda Cotia</div></div>
+<div class="kpi x"><div class="n">1.826</div><div class="l">votos de Alexandre<br>em toda Cotia</div></div>
+</div>
+<div class="note">
+<h3>O que os números dizem</h3>
+<p>As equipes declararam 278 atribuições, que somam 158 seções distintas. Átila fez 1.874 votos e Alexandre 1.826 no município.</p>
+</div>
+<div class="note" style="border-left-color:var(--alex)">
+<h3>O que precisa de atenção</h3>
+<p>41 seções foram declaradas por mais de uma equipe. Sem uma regra de responsabilidade, parte do esforço fica duplicada e o ranking não pode ser somado como total da campanha.</p>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 3: RANKING -->
+<section class="slide">
+<div class="wrap">
+<div class="eyebrow">Ranking</div>
+<h2>Votos por equipe nas seções declaradas</h2>
+<div class="rank">
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">1</i>TIME MQ FELIPE</div>
+<div class="bar" title="Átila 145 · Alexandre 143">
+<span class="seg-a" style="width:100.0%"></span>
+<span class="seg-g" style="width:89.66%;margin-left:-89.66%"></span>
+<span class="seg-x" style="width:98.62%;margin-left:-98.62%"></span>
+</div>
+<div class="val">145 · 143</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">2</i>TIME GU ADALTO_FELIPE</div>
+<div class="bar" title="Átila 139 · Alexandre 129">
+<span class="seg-a" style="width:95.86%"></span>
+<span class="seg-g" style="width:81.38%;margin-left:-81.38%"></span>
+<span class="seg-x" style="width:88.97%;margin-left:-84.83%"></span>
+</div>
+<div class="val">139 · 129</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">3</i>TIME FB MARIVALDO</div>
+<div class="bar" title="Átila 138 · Alexandre 136">
+<span class="seg-a" style="width:95.17%"></span>
+<span class="seg-g" style="width:51.72%;margin-left:-51.72%"></span>
+<span class="seg-x" style="width:93.79%;margin-left:-88.96000000000001%"></span>
+</div>
+<div class="val">138 · 136</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">4</i>TIME DN MOISES</div>
+<div class="bar" title="Átila 125 · Alexandre 123">
+<span class="seg-a" style="width:86.21%"></span>
+<span class="seg-g" style="width:54.48%;margin-left:-54.48%"></span>
+<span class="seg-x" style="width:84.83%;margin-left:-71.03999999999999%"></span>
+</div>
+<div class="val">125 · 123</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">5</i>TIME GU AUGUSTO</div>
+<div class="bar" title="Átila 118 · Alexandre 113">
+<span class="seg-a" style="width:81.38%"></span>
+<span class="seg-g" style="width:54.48%;margin-left:-54.48%"></span>
+<span class="seg-x" style="width:77.93%;margin-left:-59.31%"></span>
+</div>
+<div class="val">118 · 113</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">6</i>TIME MQ BARRIGA</div>
+<div class="bar" title="Átila 112 · Alexandre 107">
+<span class="seg-a" style="width:77.24%"></span>
+<span class="seg-g" style="width:62.07%;margin-left:-62.07%"></span>
+<span class="seg-x" style="width:73.79%;margin-left:-51.03%"></span>
+</div>
+<div class="val">112 · 107</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">7</i>TIME GU NALDO</div>
+<div class="bar" title="Átila 107 · Alexandre 97">
+<span class="seg-a" style="width:73.79%"></span>
+<span class="seg-g" style="width:53.1%;margin-left:-53.1%"></span>
+<span class="seg-x" style="width:66.9%;margin-left:-40.69000000000001%"></span>
+</div>
+<div class="val">107 · 97</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">8</i>TIME GU KIKO</div>
+<div class="bar" title="Átila 103 · Alexandre 93">
+<span class="seg-a" style="width:71.03%"></span>
+<span class="seg-g" style="width:66.21%;margin-left:-66.21%"></span>
+<span class="seg-x" style="width:64.14%;margin-left:-35.17%"></span>
+</div>
+<div class="val">103 · 93</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">9</i>TIME FB DANILO PÃO</div>
+<div class="bar" title="Átila 92 · Alexandre 92">
+<span class="seg-a" style="width:63.45%"></span>
+<span class="seg-g" style="width:14.48%;margin-left:-14.48%"></span>
+<span class="seg-x" style="width:63.45%;margin-left:-26.900000000000006%"></span>
+</div>
+<div class="val">92 · 92</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">10</i>TIME GU BIRO</div>
+<div class="bar" title="Átila 88 · Alexandre 89">
+<span class="seg-a" style="width:60.69%"></span>
+<span class="seg-g" style="width:48.97%;margin-left:-48.97%"></span>
+<span class="seg-x" style="width:61.38%;margin-left:-22.07%"></span>
+</div>
+<div class="val">88 · 89</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">11</i>TIME RON LANGO</div>
+<div class="bar" title="Átila 76 · Alexandre 73">
+<span class="seg-a" style="width:52.41%"></span>
+<span class="seg-g" style="width:13.79%;margin-left:-13.79%"></span>
+<span class="seg-x" style="width:50.34%;margin-left:-2.75%"></span>
+</div>
+<div class="val">76 · 73</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">12</i>TIME RON MARCIO</div>
+<div class="bar" title="Átila 68 · Alexandre 62">
+<span class="seg-a" style="width:46.9%"></span>
+<span class="seg-g" style="width:26.9%;margin-left:-26.9%"></span>
+<span class="seg-x" style="width:42.76%;margin-left:10.340000000000003%"></span>
+</div>
+<div class="val">68 · 62</div>
+</div>
+<div class="row">
+<div class="nm"><i style="color:var(--muted);margin-right:6px;font-style:normal;font-variant-numeric:tabular-nums">13</i>TIME GU RODRIGO</div>
+<div class="bar" title="Átila 66 · Alexandre 61">
+<span class="seg-a" style="width:45.52%"></span>
+<span class="seg-g" style="width:33.1%;margin-left:-33.1%"></span>
+<span class="seg-x" style="width:42.07%;margin-left:12.409999999999997%"></span>
+</div>
+<div class="val">66 · 61</div>
+</div>
+</div>
+<div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;font-size:12px;color:var(--muted)">
+<span><span style="display:inline-block;width:10px;height:10px;background:var(--atila);border-radius:2px;margin-right:6px;vertical-align:middle"></span>Átila · seções exclusivas</span>
+<span><span style="display:inline-block;width:10px;height:10px;background:repeating-linear-gradient(135deg,rgba(168,163,152,.3) 0 4px,rgba(168,163,152,.1) 4px 8px);border-radius:2px;margin-right:6px;vertical-align:middle"></span>Átila · seções compartilhadas</span>
+<span><span style="display:inline-block;width:10px;height:10px;background:var(--alex);border-radius:2px;margin-right:6px;vertical-align:middle"></span>Alexandre · votos</span>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 4: TABELA -->
+<section class="slide">
+<div class="wrap">
+<div class="eyebrow">Detalhamento</div>
+<h2>Uma linha por equipe</h2>
+<table class="tbl">
+<thead><tr><th>Equipe</th><th>Seções</th><th colspan="3" style="text-align:center;color:var(--atila)">Átila · Estadual</th><th colspan="3" style="text-align:center;color:var(--alex)">Alexandre · Federal</th></tr>
+<tr><th></th><th></th><th>Ex.</th><th>Comp.</th><th>Total</th><th>Ex.</th><th>Comp.</th><th>Total</th></tr></thead>
+<tbody>
+<tr style="background:rgba(14,76,90,.04)"><td><b>TIME MQ FELIPE</b></td><td>16 (1 ex)</td><td class="a">15</td><td class="a" style="opacity:.6">130</td><td class="a">145</td><td class="x">15</td><td class="x" style="opacity:.6">128</td><td class="x">143</td></tr>
+<tr><td><b>TIME GU ADALTO_FELIPE</b></td><td>16 (4 ex)</td><td class="a">21</td><td class="a" style="opacity:.6">118</td><td class="a">139</td><td class="x">16</td><td class="x" style="opacity:.6">113</td><td class="x">129</td></tr>
+<tr><td><b>TIME FB MARIVALDO</b></td><td>18 (9 ex)</td><td class="a">63</td><td class="a" style="opacity:.6">75</td><td class="a">138</td><td class="x">58</td><td class="x" style="opacity:.6">78</td><td class="x">136</td></tr>
+<tr><td><b>TIME DN MOISES</b></td><td>23 (12 ex)</td><td class="a">46</td><td class="a" style="opacity:.6">79</td><td class="a">125</td><td class="x">45</td><td class="x" style="opacity:.6">78</td><td class="x">123</td></tr>
+<tr><td><b>TIME GU AUGUSTO</b></td><td>20 (9 ex)</td><td class="a">39</td><td class="a" style="opacity:.6">79</td><td class="a">118</td><td class="x">40</td><td class="x" style="opacity:.6">73</td><td class="x">113</td></tr>
+<tr><td><b>TIME MQ BARRIGA</b></td><td>17 (7 ex)</td><td class="a">22</td><td class="a" style="opacity:.6">90</td><td class="a">112</td><td class="x">22</td><td class="x" style="opacity:.6">85</td><td class="x">107</td></tr>
+<tr><td><b>TIME GU NALDO</b></td><td>20 (11 ex)</td><td class="a">30</td><td class="a" style="opacity:.6">77</td><td class="a">107</td><td class="x">30</td><td class="x" style="opacity:.6">67</td><td class="x">97</td></tr>
+<tr><td><b>TIME GU KIKO</b></td><td>16 (5 ex)</td><td class="a">7</td><td class="a" style="opacity:.6">96</td><td class="a">103</td><td class="x">6</td><td class="x" style="opacity:.6">87</td><td class="x">93</td></tr>
+<tr><td><b>TIME FB DANILO PÃO</b></td><td>20 (16 ex)</td><td class="a">71</td><td class="a" style="opacity:.6">21</td><td class="a">92</td><td class="x">73</td><td class="x" style="opacity:.6">19</td><td class="x">92</td></tr>
+<tr><td><b>TIME GU BIRO</b></td><td>16 (5 ex)</td><td class="a">17</td><td class="a" style="opacity:.6">71</td><td class="a">88</td><td class="x">16</td><td class="x" style="opacity:.6">73</td><td class="x">89</td></tr>
+<tr><td><b>TIME RON LANGO</b></td><td>19 (16 ex)</td><td class="a">56</td><td class="a" style="opacity:.6">20</td><td class="a">76</td><td class="x">53</td><td class="x" style="opacity:.6">20</td><td class="x">73</td></tr>
+<tr><td><b>TIME RON MARCIO</b></td><td>15 (10 ex)</td><td class="a">29</td><td class="a" style="opacity:.6">39</td><td class="a">68</td><td class="x">25</td><td class="x" style="opacity:.6">37</td><td class="x">62</td></tr>
+<tr><td><b>TIME GU RODRIGO</b></td><td>18 (12 ex)</td><td class="a">18</td><td class="a" style="opacity:.6">48</td><td class="a">66</td><td class="x">23</td><td class="x" style="opacity:.6">38</td><td class="x">61</td></tr>
+</tbody></table>
+</div>
+</section>
+
+<!-- SLIDE 5: SOBREPOSIÇÃO -->
+<section class="slide">
+<div class="wrap">
+<div class="eyebrow">O ponto crítico</div>
+<h2>{S['secoes_compartilhadas']} seções estão em <em style="color:var(--alex)">mais de uma</em> equipe</h2>
+<p class="lede">Essas seções aparecem repetidas na planilha. Somar os votos de todas as equipes conta o mesmo eleitor mais de uma vez, então o ranking separa o que é exclusivo do que é compartilhado.</p>
+<div class="kpis" style="margin-top:24px">
+<div class="kpi"><div class="n">{S['secoes_compartilhadas']}</div><div class="l">seções declaradas por<br>duas ou mais equipes</div></div>
+<div class="kpi"><div class="n">{S['secoes_exclusivas']}</div><div class="l">seções com<br>responsável único</div></div>
+</div>
+<div class="note" style="border-left-color:var(--alex)">
+<h3>Leitura correta</h3>
+<p>O número ao lado do nome de cada equipe é o voto que passa pela sua área. Onde há sobreposição, o mérito é dividido — e a apresentação não soma isso como resultado líquido da campanha.</p>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 6: CONCLUSÃO -->
+<section class="slide">
+<div class="wrap">
+<div class="eyebrow">Conclusão</div>
+<h2>O que fazer com isso</h2>
+<div class="bullets">
+<div class="bullet"><div class="num">01</div><p><b>{T[0]['name']}</b> lidera em votos somados ({fmt(T[0]['atila_total'])} Átila / {fmt(T[0]['alex_total'])} Alexandre), mas concentra boa parte em área compartilhada.</p></div>
+<div class="bullet"><div class="num">02</div><p><b>{maior_excl['name']}</b> tem o maior número de seções exclusivas ({maior_excl['secoes_excl']}). É a equipe com território mais definido.</p></div>
+<div class="bullet"><div class="num">03</div><p>Definir um responsável por seção nas {S['secoes_compartilhadas']} áreas divididas. Sem isso o mesmo voto entra em duas equipes e a cobrança fica impossível.</p></div>
+<div class="bullet"><div class="num">04</div><p>A cobertura de {cobertura}% deixa {S['secoes_cotia'] - S['secoes_unicas']} seções sem equipe declarada — território aberto para a próxima fase.</p></div>
+</div>
+</div>
+</section>
+
+</body>
+</html>

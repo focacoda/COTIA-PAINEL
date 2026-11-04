@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F4EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Cotia 2026 · Leitura da Equipe</title>
+<style>
+:root{
+  color-scheme: light;
+  --paper:#F7F4EE;
+  --paper-2:#EFEAE0;
+  --ink:#15171B;
+  --muted:#6E6C65;
+  --line:#DBD4C6;
+  --atila:#0E4C5A;
+  --alex:#B4441A;
+  --gray:#A8A398;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+
+.deck{
+  display:flex;overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  height:100dvh;width:100%;
+  scrollbar-width:none;
+}
+.deck::-webkit-scrollbar{display:none}
+
+.slide{
+  flex:0 0 100%;width:100%;height:100dvh;
+  scroll-snap-align:start;scroll-snap-stop:always;
+  padding:clamp(22px,4.4vh,54px) clamp(20px,4.2vw,72px);
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.slide-in{width:100%;max-width:1180px;margin:0 auto}
+
+.eyebrow{display:flex;align-items:center;gap:11px;font-size:clamp(9px,1vw,11px);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.55}
+h1{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;line-height:1.0;font-size:clamp(34px,6.4vw,78px);margin:18px 0 0}
+h2{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;line-height:1.08;font-size:clamp(24px,3.5vw,44px);margin:12px 0 clamp(12px,2.2vh,22px)}
+.lede{font-size:clamp(13px,1.5vw,17px);line-height:1.6;color:var(--muted);max-width:74ch}
+h1 em{font-style:normal;color:var(--atila)}
+h2 em{font-style:italic}
+
+.rule{height:1px;background:var(--line);margin:clamp(14px,2.6vh,26px) 0}
+
+/* ---- cover ---- */
+.cover{justify-content:space-between}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+.cover-meta{font-size:clamp(10px,1.1vw,12px);color:var(--muted);text-align:right;line-height:1.7;letter-spacing:.02em}
+.cover-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.chip{font-size:clamp(10px,1.05vw,12px);font-weight:650;letter-spacing:.02em;padding:7px 13px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.5)}
+.chip.a{border-color:rgba(14,76,90,.35);color:var(--atila);background:rgba(14,76,90,.06)}
+.chip.x{border-color:rgba(180,68,26,.32);color:var(--alex);background:rgba(180,68,26,.06)}
+
+/* ---- KPI ---- */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.6vw,22px)}
+.kpi{border-top:2px solid var(--ink);padding-top:12px}
+.kpi .n{font-family:var(--serif);font-size:clamp(26px,4.2vw,52px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:clamp(10px,1.1vw,12.5px);color:var(--muted);margin-top:8px;line-height:1.45}
+.kpi.a{border-top-color:var(--atila)}
+.kpi.x{border-top-color:var(--alex)}
+.kpi.a .n{color:var(--atila)}
+.kpi.x .n{color:var(--alex)}
+
+/* ---- ranking bars ---- */
+.rank{display:flex;flex-direction:column;gap:clamp(5px,.85vh,10px)}
+.row{display:grid;grid-template-columns:minmax(96px,174px) 1fr minmax(56px,84px);gap:clamp(8px,1.4vw,18px);align-items:center}
+.row .nm{font-size:clamp(10px,1.15vw,13px);font-weight:650;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .nm i{font-style:normal;color:var(--muted);font-weight:500;margin-right:6px;font-variant-numeric:tabular-nums}
+.bar{height:clamp(13px,2.1vh,22px);display:flex;border-radius:2px;overflow:hidden;background:var(--paper-2)}
+.bar span{display:block;height:100%}
+.seg-a{background:var(--atila)}
+.seg-x{background:var(--alex)}
+.seg-ghost{background:repeating-linear-gradient(135deg,rgba(168,163,152,.30) 0 5px,rgba(168,163,152,.12) 5px 10px)}
+.row .val{text-align:right;font-variant-numeric:tabular-nums;font-size:clamp(10px,1.15vw,13px);font-weight:700}
+
+/* ---- table ---- */
+.tbl{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.tbl th{text-align:right;font-size:clamp(8.5px,.92vw,10.5px);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 8px 9px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.tbl th:first-child,.tbl td:first-child{text-align:left;padding-left:0}
+.tbl th:nth-child(2),.tbl td:nth-child(2){text-align:left}
+.tbl td{padding:clamp(4px,.72vh,8px) 8px;border-bottom:1px solid var(--line);text-align:right;font-size:clamp(10px,1.12vw,13px);white-space:nowrap}
+.tbl tr:last-child td{border-bottom:0}
+.tbl tbody tr.hl td{background:rgba(14,76,90,.045)}
+.tbl .a{color:var(--atila);font-weight:700}
+.tbl .x{color:var(--alex);font-weight:700}
+.tbl .rk{color:var(--muted);font-size:clamp(9px,1vw,11px);margin-right:7px;font-variant-numeric:tabular-nums}
+.tbl .team{font-weight:650}
+
+/* ---- callouts ---- */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.6vw,40px)}
+.note{border-left:2px solid var(--ink);padding:2px 0 2px 15px;max-width:52ch}
+.note h3{font-size:clamp(11px,1.2vw,13px);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:700}
+.note p{font-size:clamp(11.5px,1.25vw,14.5px);line-height:1.65;color:#3A3A36}
+.note.warn{border-left-color:var(--alex)}
+.note.ok{border-left-color:var(--atila)}
+
+.legend{display:flex;gap:clamp(12px,2vw,26px);flex-wrap:wrap;margin-top:clamp(12px,2vh,20px);font-size:clamp(9.5px,1.05vw,12px);color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:7px;vertical-align:middle}
+
+.bullets{display:flex;flex-direction:column;gap:clamp(10px,1.9vh,18px);max-width:88ch}
+.bullet{display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:start}
+.bullet .num{font-family:var(--serif);font-size:clamp(13px,1.5vw,17px);color:var(--muted);line-height:1.35;font-variant-numeric:tabular-nums}
+.bullet p{font-size:clamp(11.5px,1.3vw,15px);line-height:1.6;color:#3A3A36}
+.bullet p b{color:var(--ink);font-weight:700}
+
+/* ---- footer / nav ---- */
+.footer{position:absolute;left:clamp(20px,4.2vw,72px);right:clamp(20px,4.2vw,72px);bottom:clamp(12px,2vh,22px);display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:clamp(9px,.95vw,11px);color:var(--muted);letter-spacing:.06em}
+.dots{display:flex;gap:5px}
+.dots b{width:5px;height:5px;border-radius:50%;background:var(--line);display:block}
+.dots b.on{background:var(--ink)}
+.nav{position:fixed;right:clamp(12px,2vw,26px);bottom:clamp(12px,2.4vh,26px);display:flex;gap:8px;z-index:40}
+.nav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(247,244,238,.92);color:var(--ink);font-size:15px;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)}
+.nav button:active{transform:scale(.94)}
+.nav button:disabled{opacity:.32}
+
+/* mobile / narrow */
+@media (max-width:820px){
+  .deck{flex-direction:column;overflow-x:hidden;overflow-y:auto;scroll-snap-type:y mandatory;height:100dvh}
+  .slide{height:auto;min-height:100dvh;justify-content:flex-start;padding-top:clamp(26px,5vh,44px);padding-bottom:clamp(56px,9vh,80px)}
+  .kpis{grid-template-columns:1fr 1fr;gap:14px}
+  .grid2{grid-template-columns:1fr}
+  .row{grid-template-columns:minmax(84px,40%) 1fr minmax(44px,52px);gap:8px}
+  .footer{position:static;margin-top:clamp(16px,3vh,26px)}
+  .nav{display:none}
+  .tbl{font-size:11px}
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -2px}
+}
+@media (max-width:420px){
+  .kpis{grid-template-columns:1fr}
+  h1{font-size:clamp(30px,9vw,40px)}
+}
+@media print{
+  .deck{display:block;height:auto;overflow:visible}
+  .slide{height:210mm;page-break-after:always;break-after:page}
+  .nav{display:none}
+}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <!-- 1 · CAPA -->
+  <section class="slide cover">
+    <div class="slide-in">
+      <div class="cover-top">
+        <div class="eyebrow">Campanha 2026 · Cotia</div>
+        <div class="cover-meta">
+          Zonas 227 e 286<br>
+          Leitura territorial da equipe
+        </div>
+      </div>
+
+      <div style="margin-top:clamp(28px,7vh,80px)">
+        <h1>Onde cada equipe<br>entrega <em>voto</em>.</h1>
+        <p class="lede" style="margin-top:clamp(18px,2.6vh,26px)">Cruzamento das zonas e seções declaradas pelas 13 equipes com a votação real de Átila Jacomussi e Alexandre Pereira em Cotia. 158 seções únicas, cobertura de <span id="covPct">—</span> do município.</p>
+        <div class="tag-row">
+          <span class="chip a">Átila Jacomussi · Estadual</span>
+          <span class="chip x">Alexandre Pereira · Federal</span>
+          <span class="chip">1.874 + 1.826 votos</span>
+        </div>
+      </div>
+
+      <div class="cover-foot">
+        <div class="cover-meta" style="text-align:left" id="coverFoot"></div>
+        <div class="eyebrow">Deslize para ler</div>
+      </div>
+    </div>
+    <div class="footer"><span>Apuração por seção</span><div class="dots" id="dots"></div><span>01</span></div>
+  </section>
+
+  <!-- 2 · RETRATO -->
+  <section class="slide">
+    <div class="slide-in">
+      <div class="eyebrow">Retrato da operação</div>
+      <h2>A equipe cobre <em>metade</em> de Cotia</h2>
+      <div class="kpis" id="kpis"></div>
+      <div class="rule"></div>
+      <div class="grid2">
+        <div class="note ok">
+          <h3>O que os números dizem</h3>
+          <p id="kpiNote"></p>
+        </div>
+        <div class="note warn">
+          <h3>O que precisa de atenção</h3>
+          <p id="kpiWarn"></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>Apuração por seção</span><div class="dots"></div><span>02</span></div>
+  </section>
+
+  <!-- 3 · RANKING -->
+  <section class="slide">
+    <div class="slide-in">
+      <div class="eyebrow">Ranking</div>
+      <h2>Votos por equipe nas seções declaradas</h2>
+      <div class="rank" id="rank"></div>
+      <div class="legend">
+        <span><i class="seg-a"></i>Átila · seções exclusivas</span>
+        <span><i class="seg-ghost"></i>Átila · seções compartilhadas</span>
+        <span><i class="seg-x"></i>Alexandre · votos</span>
+      </div>
+    </div>
+    <div class="footer"><span>Barras comparam o total de cada candidato</span><div class="dots"></div><span>03</span></div>
+  </section>
+
+  <!-- 4 · TABELA -->
+  <section class="slide">
+    <div class="slide-in">
+      <div class="eyebrow">Detalhamento</div>
+      <h2>Uma linha por equipe</h2>
+      <div class="tbl-wrap">
+        <table class="tbl" id="tbl"></table>
+      </div>
+    </div>
+    <div class="footer"><span>Ex. = seção exclusiva da equipe · Comp. = seção dividida</span><div class="dots"></div><span>04</span></div>
+  </section>
+
+  <!-- 5 · SOBREPOSICAO -->
+  <section class="slide">
+    <div class="slide-in">
+      <div class="eyebrow">O ponto crítico</div>
+      <h2>41 seções estão em <em>mais de uma</em> equipe</h2>
+      <p class="lede">Essas seções aparecem repetidas na planilha. Somar os votos de todas as equipes conta o mesmo eleitor mais de uma vez, então o ranking separa o que é exclusivo do que é compartilhado.</p>
+      <div class="rule"></div>
+      <div class="grid2">
+        <div>
+          <div class="kpis" id="dupKpis" style="grid-template-columns:1fr 1fr"></div>
+        </div>
+        <div class="note warn">
+          <h3>Leitura correta</h3>
+          <p>O número ao lado do nome de cada equipe é o voto que passa pela sua área. Onde há sobreposição, o mérito é dividido — e a apresentação não soma isso como resultado líquido da campanha.</p>
+        </div>
+      </div>
+      <div class="rule"></div>
+      <div class="note">
+        <h3>Seções com maior disputa interna</h3>
+        <p id="dupHot"></p>
+      </div>
+    </div>
+    <div class="footer"><span>Seções repetidas na planilha da equipe</span><div class="dots"></div><span>05</span></div>
+  </section>
+
+  <!-- 6 · ANALISE -->
+  <section class="slide">
+    <div class="slide-in">
+      <div class="eyebrow">Conclusão</div>
+      <h2>O que fazer com isso</h2>
+      <div class="bullets" id="bullets"></div>
+    </div>
+    <div class="footer"><span>Encaminhamento para a coordenação</span><div class="dots"></div><span>06</span></div>
+  </section>
+
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="Anterior">&#8592;</button>
+  <button id="next" aria-label="Próximo">&#8594;</button>
+</div>
+
+<script id="deck-data" type="application/json">{"teams": [{"name": "TIME MQ FELIPE", "secoes_total": 16, "secoes_excl": 1, "secoes_shared": 15, "atila_excl": 15, "atila_shared": 130, "alex_excl": 15, "alex_shared": 128, "secoes_sem_atila": 0, "secoes_sem_alex": 0, "eleitores": 8970, "bairros": ["JARDIM SÃO MIGUEL", "JARDIM PANORAMA", "JARDIM LAVAPÉ"], "atila_total": 145, "alex_total": 143, "rank": 1}, {"name": "TIME GU ADALTO_FELIPE", "secoes_total": 16, "secoes_excl": 4, "secoes_shared": 12, "atila_excl": 21, "atila_shared": 118, "alex_excl": 16, "alex_shared": 113, "secoes_sem_atila": 0, "secoes_sem_alex": 0, "eleitores": 9182, "bairros": ["JARDIM PANORAMA", "JARDIM SÃO MIGUEL", "PORTÃO"], "atila_total": 139, "alex_total": 129, "rank": 2}, {"name": "TIME FB MARIVALDO", "secoes_total": 18, "secoes_excl": 9, "secoes_shared": 9, "atila_excl": 63, "atila_shared": 75, "alex_excl": 58, "alex_shared": 78, "secoes_sem_atila": 0, "secoes_sem_alex": 0, "eleitores": 9524, "bairros": ["JARDIM PANORAMA", "JARDIM SÃO MIGUEL", "PARQUE ALEXANDRE"], "atila_total": 138, "alex_total": 136, "rank": 3}, {"name": "TIME DN MOISES", "secoes_total": 23, "secoes_excl": 12, "secoes_shared": 11, "atila_excl": 46, "atila_shared": 79, "alex_excl": 45, "alex_shared": 78, "secoes_sem_atila": 4, "secoes_sem_alex": 3, "eleitores": 10898, "bairros": ["JARDIM SÃO MIGUEL", "JARDIM LEONOR"], "atila_total": 125, "alex_total": 123, "rank": 4}, {"name": "TIME GU AUGUSTO", "secoes_total": 20, "secoes_excl": 9, "secoes_shared": 11, "atila_excl": 39, "atila_shared": 79, "alex_excl": 40, "alex_shared": 73, "secoes_sem_atila": 0, "secoes_sem_alex": 0, "eleitores": 11268, "bairros": ["JARDIM PANORAMA", "JARDIM NOVA COIMBRA", "JARDIM ESTELA MARIS"], "atila_total": 118, "alex_total": 113, "rank": 5}, {"name": "TIME MQ BARRIGA", "secoes_total": 17, "secoes_excl": 7, "secoes_shared": 10, "atila_excl": 22, "atila_shared": 90, "alex_excl": 22, "alex_shared": 85, "secoes_sem_atila": 3, "secoes_sem_alex": 3, "eleitores": 9124, "bairros": ["JARDIM PANORAMA", "JARDIM SÃO MIGUEL", "BAIRRO DOS PEREIRAS"], "atila_total": 112, "alex_total": 107, "rank": 6}, {"name": "TIME GU NALDO", "secoes_total": 20, "secoes_excl": 11, "secoes_shared": 9, "atila_excl": 30, "atila_shared": 77, "alex_excl": 30, "alex_shared": 67, "secoes_sem_atila": 2, "secoes_sem_alex": 2, "eleitores": 9978, "bairros": ["JARDIM PETROPOLIS", "ATALAIA"], "atila_total": 107, "alex_total": 97, "rank": 7}, {"name": "TIME GU KIKO", "secoes_total": 16, "secoes_excl": 5, "secoes_shared": 11, "atila_excl": 7, "atila_shared": 96, "alex_excl": 6, "alex_shared": 87, "secoes_sem_atila": 2, "secoes_sem_alex": 1, "eleitores": 7990, "bairros": ["JARDIM SÃO MIGUEL", "JARDIM PANORAMA", "VILA SÃO JOAQUIM"], "atila_total": 103, "alex_total": 93, "rank": 8}, {"name": "TIME FB DANILO PÃO", "secoes_total": 20, "secoes_excl": 16, "secoes_shared": 4, "atila_excl": 71, "atila_shared": 21, "alex_excl": 73, "alex_shared": 19, "secoes_sem_atila": 4, "secoes_sem_alex": 1, "eleitores": 10814, "bairros": ["JARDIM LEONOR", "VILA SÃO JOAQUIM", "JARDIM LAVAPÉ"], "atila_total": 92, "alex_total": 92, "rank": 9}, {"name": "TIME GU BIRO", "secoes_total": 16, "secoes_excl": 5, "secoes_shared": 11, "atila_excl": 17, "atila_shared": 71, "alex_excl": 16, "alex_shared": 73, "secoes_sem_atila": 1, "secoes_sem_alex": 1, "eleitores": 8660, "bairros": ["JARDIM PANORAMA", "JARDIM SÃO MIGUEL", "JARDIM PETROPOLIS"], "atila_total": 88, "alex_total": 89, "rank": 10}, {"name": "TIME RON LANGO", "secoes_total": 19, "secoes_excl": 16, "secoes_shared": 3, "atila_excl": 56, "atila_shared": 20, "alex_excl": 53, "alex_shared": 20, "secoes_sem_atila": 1, "secoes_sem_alex": 2, "eleitores": 10076, "bairros": ["CENTRO (CAUCAIA DO ALTO)", "JARDIM ARARUAMA", "JARDIM LEONOR"], "atila_total": 76, "alex_total": 73, "rank": 11}, {"name": "TIME RON MARCIO", "secoes_total": 15, "secoes_excl": 10, "secoes_shared": 5, "atila_excl": 29, "atila_shared": 39, "alex_excl": 25, "alex_shared": 37, "secoes_sem_atila": 1, "secoes_sem_alex": 1, "eleitores": 8652, "bairros": ["JARDIM PETROPOLIS", "JARDIM SÃO MIGUEL", "CENTRO"], "atila_total": 68, "alex_total": 62, "rank": 12}, {"name": "TIME GU RODRIGO", "secoes_total": 18, "secoes_excl": 12, "secoes_shared": 6, "atila_excl": 18, "atila_shared": 48, "alex_excl": 23, "alex_shared": 38, "secoes_sem_atila": 4, "secoes_sem_alex": 3, "eleitores": 8446, "bairros": ["RIO COTIA", "GRANJA VIANA"], "atila_total": 66, "alex_total": 61, "rank": 13}], "summary": {"secoes_unicas": 158, "secoes_exclusivas": 117, "secoes_compartilhadas": 41, "atribuicoes": 278, "equipes": 13, "atila_cotia": 1874, "alex_cotia": 1826, "atila_secoes": 467, "alex_secoes": 476, "validos_est": 149926, "validos_fed": 149926, "secoes_cotia": 558, "secoes_com_voto": 142}, "bairros": [{"bairro": "JARDIM PANORAMA", "secoes": 18}, {"bairro": "JARDIM LEONOR", "secoes": 10}, {"bairro": "PORTÃO", "secoes": 10}, {"bairro": "JARDIM PETROPOLIS", "secoes": 10}, {"bairro": "JARDIM SÃO MIGUEL", "secoes": 9}, {"bairro": "JARDIM SANDRA", "secoes": 7}, {"bairro": "VILA SÃO JOAQUIM", "secoes": 6}, {"bairro": "ATALAIA", "secoes": 5}, {"bairro": "PARQUE MIRANTE DA MATA", "secoes": 5}, {"bairro": "CENTRO", "secoes": 5}, {"bairro": "JARDIM ARARUAMA", "secoes": 5}], "top_secoes": [{"zona": "286", "secao": "103", "bairro": "ATALAIA", "atila": 15, "alex": 15, "equipes": 1}, {"zona": "286", "secao": "241", "bairro": "JARDIM LAVAPÉ", "atila": 15, "alex": 15, "equipes": 1}, {"zona": "286", "secao": "107", "bairro": "ATALAIA", "atila": 15, "alex": 14, "equipes": 2}, {"zona": "227", "secao": "302", "bairro": "JARDIM PANORAMA", "atila": 14, "alex": 13, "equipes": 4}, {"zona": "227", "secao": "473", "bairro": "JARDIM PANORAMA", "atila": 16, "alex": 11, "equipes": 3}, {"zona": "286", "secao": "1", "bairro": "ATALAIA", "atila": 14, "alex": 11, "equipes": 1}, {"zona": "286", "secao": "46", "bairro": "JARDIM ARARUAMA", "atila": 14, "alex": 11, "equipes": 2}, {"zona": "227", "secao": "493", "bairro": "JARDIM LEONOR", "atila": 12, "alex": 12, "equipes": 1}, {"zona": "227", "secao": "557", "bairro": "JARDIM PANORAMA", "atila": 12, "alex": 11, "equipes": 3}, {"zona": "286", "secao": "80", "bairro": "JARDIM LAVAPÉ", "atila": 13, "alex": 10, "equipes": 1}, {"zona": "227", "secao": "653", "bairro": "JARDIM SÃO MIGUEL", "atila": 12, "alex": 11, "equipes": 4}, {"zona": "286", "secao": "221", "bairro": "JARDIM ARARUAMA", "atila": 12, "alex": 10, "equipes": 3}]}</script>
+<script>
+(function(){
+  var D = JSON.parse(document.getElementById('deck-data').textContent);
+  var S = D.summary, T = D.teams, B = D.bairros || [];
+  var fmt = function(n){ return (n||0).toLocaleString('pt-BR'); };
+  var pct = function(a,b){ return b ? Math.round(a/b*100) : 0; };
+
+  // cobertura
+  var cobertura = pct(S.secoes_unicas, S.secoes_cotia || 558);
+  document.getElementById('covPct').textContent = cobertura + '%';
+  document.getElementById('coverFoot').innerHTML =
+    'Cotia · ' + fmt(S.secoes_unicas) + ' de ' + fmt(S.secoes_cotia || 558) + ' seções<br>' +
+    T.length + ' equipes · ' + fmt(S.atribuicoes) + ' atribuições';
+
+  // KPIs
+  var kp = [
+    {n: fmt(S.secoes_unicas), l:'seções únicas cobertas<br>de ' + fmt(S.secoes_cotia||558) + ' em Cotia', c:''},
+    {n: cobertura + '%', l:'do município sob<br>alguma equipe', c:''},
+    {n: fmt(S.atila_cotia), l:'votos de Átila<br>em toda Cotia', c:'a'},
+    {n: fmt(S.alex_cotia), l:'votos de Alexandre<br>em toda Cotia', c:'x'}
+  ];
+  document.getElementById('kpis').innerHTML = kp.map(function(k){
+    return '<div class="kpi '+k.c+'"><div class="n">'+k.n+'</div><div class="l">'+k.l+'</div></div>';
+  }).join('');
+
+  document.getElementById('kpiNote').textContent =
+    'As equipes declararam ' + fmt(S.atribuicoes) + ' atribuições, que somam ' + fmt(S.secoes_unicas) +
+    ' seções distintas. Átila fez ' + fmt(S.atila_cotia) + ' votos e Alexandre ' + fmt(S.alex_cotia) + ' no município.';
+
+  document.getElementById('kpiWarn').textContent =
+    fmt(S.secoes_compartilhadas) + ' seções foram declaradas por mais de uma equipe. Sem uma regra de responsabilidade, ' +
+    'parte do esforço fica duplicada e o ranking não pode ser somado como total da campanha.';
+
+  // RANKING
+  var maxT = Math.max.apply(null, T.map(function(t){ return Math.max(t.atila_total, t.alex_total); }));
+  document.getElementById('rank').innerHTML = T.map(function(t, i){
+    var wa = (t.atila_total/maxT*100).toFixed(2);
+    var wx = (t.alex_total/maxT*100).toFixed(2);
+    var ghost = (t.atila_shared/maxT*100).toFixed(2);
+    var solid = (t.atila_excl/maxT*100).toFixed(2);
+    return '<div class="row">' +
+      '<div class="nm"><i>'+(i+1)+'</i>'+t.name+'</div>' +
+      '<div class="bar" title="Átila '+fmt(t.atila_total)+' · Alexandre '+fmt(t.alex_total)+'">' +
+        '<span class="seg-a" style="width:'+wa+'%"></span>' +
+        '<span class="seg-ghost" style="width:'+ghost+'%;margin-left:-'+ghost+'%"></span>' +
+        '<span class="seg-x" style="width:'+wx+'%;margin-left:'+(100-parseFloat(wa)-parseFloat(wx))+'%"></span>' +
+      '</div>' +
+      '<div class="val">'+fmt(t.atila_total)+' · '+fmt(t.alex_total)+'</div>' +
+    '</div>';
+  }).join('');
+
+  // TABELA
+  var rows = T.map(function(t, i){
+    return '<tr'+(i===0?' class="hl"':'')+'>' +
+      '<td><span class="rk">'+(i+1)+'</span><span class="team">'+t.name+'</span></td>' +
+      '<td>'+t.secoes_total+' <span style="color:var(--muted)">('+t.secoes_excl+' ex)</span></td>' +
+      '<td class="a">'+fmt(t.atila_excl)+'</td>' +
+      '<td class="a" style="opacity:.62">'+fmt(t.atila_shared)+'</td>' +
+      '<td class="a">'+fmt(t.atila_total)+'</td>' +
+      '<td class="x">'+fmt(t.alex_excl)+'</td>' +
+      '<td class="x" style="opacity:.62">'+fmt(t.alex_shared)+'</td>' +
+      '<td class="x">'+fmt(t.alex_total)+'</td>' +
+    '</tr>';
+  }).join('');
+  document.getElementById('tbl').innerHTML =
+    '<thead><tr><th>Equipe</th><th>Seções</th>' +
+    '<th colspan="3" style="text-align:center;color:var(--atila)">Átila · Estadual</th>' +
+    '<th colspan="3" style="text-align:center;color:var(--alex)">Alexandre · Federal</th></tr>' +
+    '<tr><th></th><th></th><th>Ex.</th><th>Comp.</th><th>Total</th><th>Ex.</th><th>Comp.</th><th>Total</th></tr></thead>' +
+    '<tbody>'+rows+'</tbody>';
+
+  // DUPLICADAS
+  document.getElementById('dupKpis').innerHTML =
+    '<div class="kpi"><div class="n">'+S.secoes_compartilhadas+'</div><div class="l">seções declaradas por<br>duas ou mais equipes</div></div>' +
+    '<div class="kpi"><div class="n">'+S.secoes_exclusivas+'</div><div class="l">seções com<br>responsável único</div></div>';
+
+  var hot = (D.hot || []).slice(0,4).map(function(h){
+    return '<b>Z'+h.zona+' S'+h.secao+'</b>'+(h.bairro?' · '+h.bairro:'')+' — '+h.equipes+' equipes, '+fmt(h.atila+h.alex)+' votos';
+  }).join('<br>');
+  document.getElementById('dupHot').innerHTML = hot || 'Sem dados.';
+
+  // BULLETS
+  var top = T[0], topEx = T.slice().sort(function(a,b){ return b.secoes_excl-a.secoes_excl; })[0];
+  var bl = [
+    ['01','<b>'+top.name+'</b> lidera em votos somados ('+fmt(top.atila_total)+' Átila / '+fmt(top.alex_total)+' Alexandre), mas concentra boa parte em área compartilhada.'],
+    ['02','<b>'+topEx.name+'</b> tem o maior número de seções exclusivas ('+topEx.secoes_excl+'). É a equipe com território mais definido.'],
+    ['03','Definir um responsável por seção nas '+S.secoes_compartilhadas+' áreas divididas. Sem isso o mesmo voto entra em duas equipes e a cobrança fica impossível.'],
+    ['04','A cobertura de '+cobertura+'% deixa '+fmt((S.secoes_cotia||558)-S.secoes_unicas)+' seções sem equipe declarada — território aberto para a próxima fase.']
+  ];
+  document.getElementById('bullets').innerHTML = bl.map(function(b){
+    return '<div class="bullet"><div class="num">'+b[0]+'</div><p>'+b[1]+'</p></div>';
+  }).join('');
+
+  // NAVEGAÇÃO
+  var deck=document.getElementById('deck'), slides=[].slice.call(document.querySelectorAll('.slide'));
+  var dots=document.querySelectorAll('.dots');
+  var nav=[]; slides.forEach(function(s){ var d=document.createElement('div'); d.className='dots'; s.querySelector('.footer').replaceChild(d, s.querySelector('.dots')); nav.push(d); });
+  function mark(i){ nav.forEach(function(d,k){ d.innerHTML = slides.map(function(_,j){ return '<b class="'+(j===k?'on':'')+'"></b>'; }).join(''); }); }
+  var isMobile = function(){ return window.matchMedia('(max-width:820px)').matches; };
+  function go(i){
+    i = Math.max(0, Math.min(slides.length-1, i));
+    if(isMobile()) slides[i].scrollIntoView({behavior:'smooth'});
+    else deck.scrollTo({left: slides[i].offsetLeft, behavior:'smooth'});
+    document.getElementById('prev').disabled = i===0;
+    document.getElementById('next').disabled = i===slides.length-1;
+  }
+  var cur=0;
+  function current(){
+    if(isMobile()){ var y=window.scrollY+window.innerHeight*0.4; var idx=0; slides.forEach(function(s,k){ if(s.offsetTop<=y) idx=k; }); return idx; }
+    return Math.round(deck.scrollLeft / deck.clientWidth);
+  }
+  mark(0);
+  document.getElementById('next').onclick=function(){ cur=current(); go(cur+1); };
+  document.getElementById('prev').onclick=function(){ cur=current(); go(cur-1); };
+  deck.addEventListener('scroll', function(){ mark(current()); }, {passive:true});
+  if(isMobile()) window.addEventListener('scroll', function(){ mark(current()); }, {passive:true});
+  document.addEventListener('keydown', function(e){
+    cur=current();
+    if(e.key==='ArrowRight'||e.key==='PageDown'){ e.preventDefault(); go(cur+1); }
+    if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); go(cur-1); }
+  });
+  window.addEventListener('resize', function(){ mark(current()); });
+})();
+</script>
+</body>
+</html>

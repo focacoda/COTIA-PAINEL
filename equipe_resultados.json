@@ -1,0 +1,170 @@
+{
+  "teams": [
+    {
+      "name": "TIME FB DANILO PÃO",
+      "atila_excl": 71,
+      "alex_excl": 73,
+      "atila_shared": 21,
+      "alex_shared": 19,
+      "atila_total": 92,
+      "alex_total": 92,
+      "secs_excl": 16,
+      "secs_shared": 4,
+      "rank": 1
+    },
+    {
+      "name": "TIME FB MARIVALDO",
+      "atila_excl": 63,
+      "alex_excl": 58,
+      "atila_shared": 75,
+      "alex_shared": 78,
+      "atila_total": 138,
+      "alex_total": 136,
+      "secs_excl": 9,
+      "secs_shared": 9,
+      "rank": 2
+    },
+    {
+      "name": "TIME RON LANGO",
+      "atila_excl": 56,
+      "alex_excl": 53,
+      "atila_shared": 20,
+      "alex_shared": 20,
+      "atila_total": 76,
+      "alex_total": 73,
+      "secs_excl": 16,
+      "secs_shared": 3,
+      "rank": 3
+    },
+    {
+      "name": "TIME DN MOISES",
+      "atila_excl": 46,
+      "alex_excl": 45,
+      "atila_shared": 79,
+      "alex_shared": 78,
+      "atila_total": 125,
+      "alex_total": 123,
+      "secs_excl": 12,
+      "secs_shared": 11,
+      "rank": 4
+    },
+    {
+      "name": "TIME GU AUGUSTO",
+      "atila_excl": 39,
+      "alex_excl": 40,
+      "atila_shared": 79,
+      "alex_shared": 73,
+      "atila_total": 118,
+      "alex_total": 113,
+      "secs_excl": 9,
+      "secs_shared": 11,
+      "rank": 5
+    },
+    {
+      "name": "TIME GU NALDO",
+      "atila_excl": 30,
+      "alex_excl": 30,
+      "atila_shared": 77,
+      "alex_shared": 67,
+      "atila_total": 107,
+      "alex_total": 97,
+      "secs_excl": 11,
+      "secs_shared": 9,
+      "rank": 6
+    },
+    {
+      "name": "TIME RON MARCIO",
+      "atila_excl": 29,
+      "alex_excl": 25,
+      "atila_shared": 39,
+      "alex_shared": 37,
+      "atila_total": 68,
+      "alex_total": 62,
+      "secs_excl": 10,
+      "secs_shared": 5,
+      "rank": 7
+    },
+    {
+      "name": "TIME MQ BARRIGA",
+      "atila_excl": 22,
+      "alex_excl": 22,
+      "atila_shared": 90,
+      "alex_shared": 85,
+      "atila_total": 112,
+      "alex_total": 107,
+      "secs_excl": 7,
+      "secs_shared": 10,
+      "rank": 8
+    },
+    {
+      "name": "TIME GU RODRIGO",
+      "atila_excl": 18,
+      "alex_excl": 23,
+      "atila_shared": 48,
+      "alex_shared": 38,
+      "atila_total": 66,
+      "alex_total": 61,
+      "secs_excl": 12,
+      "secs_shared": 6,
+      "rank": 9
+    },
+    {
+      "name": "TIME GU ADALTO_FELIPE",
+      "atila_excl": 21,
+      "alex_excl": 16,
+      "atila_shared": 118,
+      "alex_shared": 113,
+      "atila_total": 139,
+      "alex_total": 129,
+      "secs_excl": 4,
+      "secs_shared": 12,
+      "rank": 10
+    },
+    {
+      "name": "TIME GU BIRO",
+      "atila_excl": 17,
+      "alex_excl": 16,
+      "atila_shared": 71,
+      "alex_shared": 73,
+      "atila_total": 88,
+      "alex_total": 89,
+      "secs_excl": 5,
+      "secs_shared": 11,
+      "rank": 11
+    },
+    {
+      "name": "TIME MQ FELIPE",
+      "atila_excl": 15,
+      "alex_excl": 15,
+      "atila_shared": 130,
+      "alex_shared": 128,
+      "atila_total": 145,
+      "alex_total": 143,
+      "secs_excl": 1,
+      "secs_shared": 15,
+      "rank": 12
+    },
+    {
+      "name": "TIME GU KIKO",
+      "atila_excl": 7,
+      "alex_excl": 6,
+      "atila_shared": 96,
+      "alex_shared": 87,
+      "atila_total": 103,
+      "alex_total": 93,
+      "secs_excl": 5,
+      "secs_shared": 11,
+      "rank": 13
+    }
+  ],
+  "summary": {
+    "total_unique_sections": 158,
+    "exclusive_sections": 117,
+    "shared_sections": 41,
+    "assignments": 278,
+    "atila_cotia": 1874,
+    "alex_cotia": 1826,
+    "atila_sections": 467,
+    "alex_sections": 476
+  }
+}
