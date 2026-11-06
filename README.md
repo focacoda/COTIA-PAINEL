@@ -7,11 +7,15 @@ Painel offline de comparação de votos entre dois candidatos nas seções eleit
 | Arquivo | Descrição |
 |---|---|
 | `index.html` | Painel interativo. HTML/CSS/JS num único arquivo, dados embutidos, sem dependências externas. ~1,79 MB. |
-| `dados/cotia_dados.json` | Base completa: 558 seções, 81 escolas, 1.812 candidatos, 93.657 registros de voto. |
-| `dados/cruzamento_equipe_votos.csv` | Cruzamento seção × votos (formato simples). |
-| `dados/cruzamento_equipe_votos_detalhado.csv` | Mesmo cruzamento, com o nome da equipe em cada seção. |
+| `cotia_dados.json` | Base completa: 558 seções, 81 escolas, 1.812 candidatos, 93.657 registros de voto. |
+| `cruzamento_equipe_votos.csv` | Cruzamento seção × votos (formato simples). |
+| `cruzamento_equipe_votos_detalhado.csv` | Mesmo cruzamento, com o nome da equipe em cada seção. |
 
-O `index.html` é autossuficiente: os dados embutidos são byte a byte idênticos a `dados/cotia_dados.json`. Funciona aberto direto do disco, sem servidor. Pode ser hospedado em qualquer static host renomeando para `index.html`.
+O `index.html` é autossuficiente: os dados embutidos são byte a byte idênticos a `cotia_dados.json`. Funciona aberto direto do disco, sem servidor.
+
+Publicado em **https://focacoda.github.io/COTIA-PAINEL/** via GitHub Pages, servindo a raiz do `main`.
+
+Os demais arquivos do diretório (`cotia-painel-2026-v*.html`, `cotia-apresentacao-v6.7/v6.8.html`, `cotia-resumo-*`, `cotia-resultado-*`, scripts `.py`, `*.xlsx`) são histórico de desenvolvimento e **não** fazem parte da entrega. Os relatórios `v6.9`, `v7.0` e `v7.1` contêm contagens de seções divergentes da base — ver a seção de qualidade dos dados abaixo.
 
 ## Uso
 
